@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Christian Rioflorido | AI & Quantum Computing Researcher</title>
+  <title>Christian Lian Paulo Perez Rioflorido | AI & Quantum Computing Researcher</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
     :root {
@@ -98,6 +98,45 @@
     .pub-badge { font-size: 0.65rem; padding: 3px 10px; letter-spacing: 0.1em; text-transform: uppercase; align-self: flex-start; margin-top: 4px; white-space: nowrap; }
     .pub-badge.review { border: 1px solid rgba(201,168,76,0.4); color: var(--gold); }
     .pub-badge.published { border: 1px solid rgba(100,200,100,0.3); color: #7ec87e; }
+    .pub-badge.conference { border: 1px solid rgba(100,160,220,0.4); color: #7ab4e8; }
+
+    /* CONFERENCE PAPERS SUBSECTION */
+    .pub-subsection-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: var(--text-main);
+      margin: 56px 0 0 0;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .pub-subsection-title::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    /* PEER REVIEW BANNER */
+    .reviewer-banner {
+      margin-top: 48px;
+      padding: 28px 32px;
+      border: 1px solid var(--border);
+      background: linear-gradient(135deg, rgba(201,168,76,0.04) 0%, transparent 60%);
+      display: flex;
+      align-items: flex-start;
+      gap: 22px;
+    }
+    .reviewer-banner-icon { color: var(--gold); font-size: 1.6rem; flex-shrink: 0; margin-top: 2px; }
+    .reviewer-banner-content {}
+    .reviewer-banner-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+    .reviewer-banner-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--text-main); margin-bottom: 10px; }
+    .reviewer-journals { display: flex; flex-wrap: wrap; gap: 8px; }
+    .reviewer-journal-tag { font-size: 0.75rem; padding: 5px 14px; border: 1px solid rgba(201,168,76,0.3); color: var(--gold-light); letter-spacing: 0.06em; }
 
     /* HONORS */
     .honors-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; }
@@ -219,7 +258,7 @@
           </div>
           <div class="about-stats">
             <div><div class="stat-num">7+</div><div class="stat-label">Years Research</div></div>
-            <div><div class="stat-num">5+</div><div class="stat-label">Journal Papers</div></div>
+            <div><div class="stat-num">12+</div><div class="stat-label">Publications</div></div>
             <div><div class="stat-num">4.0</div><div class="stat-label">Ph.D. GPA</div></div>
           </div>
         </div>
@@ -300,7 +339,9 @@
   <section id="publications">
     <div class="section-inner">
       <div class="section-label">Research</div>
-      <h2 class="section-title">Journal Publications</h2>
+      <h2 class="section-title">Publications</h2>
+
+      <!-- JOURNAL PAPERS -->
       <div class="pub-list">
 
         <div class="pub-item">
@@ -355,10 +396,97 @@
 
       </div>
 
-      <div style="margin-top:40px; padding:24px 28px; border:1px solid var(--border); display:flex; align-items:center; gap:20px;">
-        <span style="color:var(--gold); font-size:1.4rem;">📄</span>
-        <div style="font-size:0.88rem; color:var(--text-muted);">Additionally, <strong style="color:var(--text-main);">9 conference papers</strong> published in international venues. Serves as a peer reviewer for <em>Applied Soft Computing</em>, <em>Soft Computing</em>, and <em>Energy Reports</em>.</div>
+      <!-- CONFERENCE PAPERS -->
+      <div class="pub-subsection-title">Conference Papers</div>
+      <div class="pub-list">
+
+        <div class="pub-item">
+          <div class="pub-year">2025</div>
+          <div>
+            <div class="pub-title">Classification of Photovoltaic Faults using CatBoost Classifier Optimized by QPSO</div>
+            <div class="pub-venue">Green Solutions &amp; Emerging Technologies for Sustainability, pp. 297–308</div>
+            <div class="pub-authors">Y.-Y. Hong, C. L. P. P. Rioflorido, H.-P. Van</div>
+          </div>
+          <span class="pub-badge conference">Conference</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2023</div>
+          <div>
+            <div class="pub-title">Design of a Non-Invasive Egg Sexing Device Utilizing Artificial Intelligence for Duck Species</div>
+            <div class="pub-venue">TENCON 2023 — IEEE Region 10 Conference</div>
+            <div class="pub-authors">S. Arenas, P. J. R. Billones, J. C. V. Lao, J. A. C. Mercado, I. D. G. Sy, C. L. P. P. Rioflorido</div>
+          </div>
+          <span class="pub-badge conference">Conference</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2023</div>
+          <div>
+            <div class="pub-title">A Deep CNN-LSTM Model Tuned by PPSO for Spatiotemporal Solar GHI Forecasting</div>
+            <div class="pub-venue">IEEE PES Innovative Smart Grid Technologies Europe (ISGT EUROPE), pp. 1–5</div>
+            <div class="pub-authors">Y.-Y. Hong, C. L. P. P. Rioflorido</div>
+          </div>
+          <span class="pub-badge conference">Conference</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2022</div>
+          <div>
+            <div class="pub-title">Design of a Household Consumption based Water Leak Detection System Utilizing Machine Learning Algorithm</div>
+            <div class="pub-venue">IET International Conference on Engineering Technologies and Applications</div>
+            <div class="pub-authors">D. J. A. Amora, M. A. V. Janapin, B. A. M. Calayag, C. L. P. P. Rioflorido, N. M. Estur et al.</div>
+          </div>
+          <span class="pub-badge conference">Conference</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2022</div>
+          <div>
+            <div class="pub-title">One-Hour Ahead Spatio-Temporal Solar GHI Forecasting Using Long Short-Term Memory</div>
+            <div class="pub-venue">IET International Conference on Engineering Technologies and Applications</div>
+            <div class="pub-authors">Y.-Y. Hong, Y.-T. Pan, C.-C. Hsu, C. L. P. P. Rioflorido, J. B. D. Santos</div>
+          </div>
+          <span class="pub-badge conference">Conference</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2022</div>
+          <div>
+            <div class="pub-title">Soft Sensing Measurement of Dissolved Ammonia Nitrogen in Tank-Based Eel Aquaculture Systems Utilizing Deep Learning</div>
+            <div class="pub-venue">IET International Conference on Engineering Technologies and Applications</div>
+            <div class="pub-authors">D. J. A. Amora, J. V. Apan, D. N. C. Layosa, R. C. Sarmiento, J. J. Tugado, C. L. P. P. Rioflorido et al.</div>
+          </div>
+          <span class="pub-badge conference">Conference</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2022</div>
+          <div>
+            <div class="pub-title">A Short-Term Spatiotemporal Wind Speed Forecasting Using CNN Optimized by PSO</div>
+            <div class="pub-venue">IET International Conference on Engineering Technologies and Applications</div>
+            <div class="pub-authors">Y.-Y. Hong, J. B. D. Santos, S. S. Lin, Y. D. Lee, J. H. Wang, J. L. Jiang, C. L. P. P. Rioflorido et al.</div>
+          </div>
+          <span class="pub-badge conference">Conference</span>
+        </div>
+
       </div>
+
+      <!-- PEER REVIEW SERVICE -->
+      <div class="reviewer-banner">
+        <div class="reviewer-banner-icon">🔍</div>
+        <div class="reviewer-banner-content">
+          <div class="reviewer-banner-label">Academic Service</div>
+          <div class="reviewer-banner-title">Peer Reviewer</div>
+          <div class="reviewer-journals">
+            <span class="reviewer-journal-tag">Applied Soft Computing</span>
+            <span class="reviewer-journal-tag">Energy Reports</span>
+            <span class="reviewer-journal-tag">IEEE Sensors Journal</span>
+            <span class="reviewer-journal-tag">Soft Computing</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 

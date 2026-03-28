@@ -64,7 +64,8 @@
     #about { background: var(--navy-mid); }
     .about-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 80px; align-items: start; }
     .about-photo-wrap { position: relative; }
-    .about-photo-frame { width: 100%; aspect-ratio: 3/4; background: linear-gradient(135deg, #1a2035 0%, #0f1628 100%); border: 1px solid var(--border); display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 0.9rem; color: var(--text-muted); letter-spacing: 0.1em; text-align: center; gap: 12px; }
+    .about-photo-frame { width: 100%; aspect-ratio: 3/4; background: linear-gradient(135deg, #1a2035 0%, #0f1628 100%); border: 1px solid var(--border); display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 0.9rem; color: var(--text-muted); letter-spacing: 0.1em; text-align: center; gap: 12px; overflow: hidden; }
+    .about-photo-img { width: 100%; height: 100%; object-fit: cover; }
     .about-photo-accent { position: absolute; bottom: -16px; right: -16px; width: 60%; height: 60%; border: 1px solid rgba(201,168,76,0.3); z-index: -1; }
     .about-text p { color: var(--text-muted); margin-bottom: 18px; font-weight: 300; font-size: 0.97rem; }
     .about-links { display: flex; gap: 14px; margin-top: 28px; flex-wrap: wrap; }
@@ -85,109 +86,8 @@
     .skill-desc { font-size: 0.86rem; color: var(--text-muted); line-height: 1.65; }
     .skill-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px; }
     .tag { font-size: 0.7rem; padding: 4px 10px; border: 1px solid var(--border); color: var(--text-muted); letter-spacing: 0.07em; }
-    <hr class="divider"/>
 
-<!-- EXPERIENCE -->
-<section id="experience">
-  <div class="section-inner">
-    <div class="section-label">Career</div>
-    <h2 class="section-title">Professional Experience</h2>
-
-    <div class="pub-list">
-
-      <!-- CURRENT RESEARCH -->
-      <div class="pub-item">
-        <div class="pub-year">2021–Present</div>
-        <div>
-          <div class="pub-title">Research Assistant (Ph.D.)</div>
-          <div class="pub-venue">Intelligent Systems on Power Engineering Lab · CYCU</div>
-          <div class="pub-authors">
-            • Secured NVIDIA Academic Grant and collaborated with NVIDIA AI Technology Center (NVAITC)<br/>
-            • Designed QNN/QLSTM architectures for typhoon and solar forecasting<br/>
-            • Built end-to-end pipelines on A100/H100 using CUDA-Q, cuQuantum, PyTorch Lightning<br/>
-            • Led LLM-based forecasting experiments with reproducible evaluation pipelines
-          </div>
-        </div>
-        <span class="pub-badge published">Current</span>
-      </div>
-
-      <!-- INDUSTRY -->
-      <div class="pub-item">
-        <div class="pub-year">2023–2024</div>
-        <div>
-          <div class="pub-title">AI / Computer Vision Intern</div>
-          <div class="pub-venue">Uni-President Information Corp. · Taipei</div>
-          <div class="pub-authors">
-            • Developed real-time object detection for retail inventory tracking (NVIDIA Metropolis)<br/>
-            • Built facial recognition system for personalized customer interaction<br/>
-            • Deployed scalable CV pipelines using AWS & Google Cloud
-          </div>
-        </div>
-        <span class="pub-badge conference">Industry</span>
-      </div>
-
-      <!-- ROBOTICS ENGINEER -->
-      <div class="pub-item">
-        <div class="pub-year">2018–2021</div>
-        <div>
-          <div class="pub-title">Deep Learning Software Engineer</div>
-          <div class="pub-venue">New Era AI Robotics · New Kinpo Group</div>
-          <div class="pub-authors">
-            • Built autonomous robotics systems using ROS (navigation, mapping, obstacle avoidance)<br/>
-            • Developed CV pipelines: detection, tracking, face recognition, activity recognition<br/>
-            • Led NLP systems for smart speakers (BERT, multilingual STT & QA)<br/>
-            • Optimized real-time inference using TensorRT across embedded systems
-          </div>
-        </div>
-        <span class="pub-badge published">Industry</span>
-      </div>
-
-      <!-- TEACHING -->
-      <div class="pub-item">
-        <div class="pub-year">2021–2026</div>
-        <div>
-          <div class="pub-title">Teaching Assistant · Artificial Intelligence</div>
-          <div class="pub-venue">Chung Yuan Christian University</div>
-          <div class="pub-authors">
-            • Delivered lectures, guided projects, and mentored students in AI & Deep Learning<br/>
-            • Supported multiple courses including ML, DL, and Big Data Analytics
-          </div>
-        </div>
-        <span class="pub-badge review">Academic</span>
-      </div>
-
-      <!-- PROFESSOR -->
-      <div class="pub-item">
-        <div class="pub-year">2022–2023</div>
-        <div>
-          <div class="pub-title">Professor · Machine Learning & Signal Processing</div>
-          <div class="pub-venue">Technological Institute of the Philippines</div>
-          <div class="pub-authors">
-            • Taught 120+ students across ML and signal processing courses<br/>
-            • Designed curriculum bridging theory with applied AI systems
-          </div>
-        </div>
-        <span class="pub-badge review">Teaching</span>
-      </div>
-
-      <!-- EARLY CAREER -->
-      <div class="pub-item">
-        <div class="pub-year">2015–2016</div>
-        <div>
-          <div class="pub-title">Test Engineer</div>
-          <div class="pub-venue">ROHM Electronics Philippines</div>
-          <div class="pub-authors">
-            • Improved semiconductor production quality via fault detection analysis<br/>
-            • Optimized signal processing pipelines for chip validation systems
-          </div>
-        </div>
-        <span class="pub-badge conference">Engineering</span>
-      </div>
-
-    </div>
-  </div>
-</section>
-    /* PUBLICATIONS */
+    /* PUBLICATIONS & EXPERIENCE (shared pub-list styles) */
     #publications { background: var(--navy-mid); }
     .pub-list { display: flex; flex-direction: column; }
     .pub-item { display: grid; grid-template-columns: 64px 1fr auto; gap: 28px; align-items: start; padding: 32px 0; border-bottom: 1px solid var(--border); }
@@ -233,7 +133,6 @@
       gap: 22px;
     }
     .reviewer-banner-icon { color: var(--gold); font-size: 1.6rem; flex-shrink: 0; margin-top: 2px; }
-    .reviewer-banner-content {}
     .reviewer-banner-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
     .reviewer-banner-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--text-main); margin-bottom: 10px; }
     .reviewer-journals { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -303,6 +202,7 @@
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#publications">Publications</a></li>
       <li><a href="#honors">Honors</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -425,6 +325,103 @@
           <div class="skill-tags">
             <span class="tag">Wind Power</span><span class="tag">Solar GHI</span><span class="tag">PSO</span><span class="tag">IEEE TPS</span>
           </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-inner">
+      <div class="section-label">Career</div>
+      <h2 class="section-title">Professional Experience</h2>
+
+      <div class="pub-list">
+
+        <div class="pub-item">
+          <div class="pub-year">2021–Present</div>
+          <div>
+            <div class="pub-title">Research Assistant (Ph.D.)</div>
+            <div class="pub-venue">Intelligent Systems on Power Engineering Lab · CYCU</div>
+            <div class="pub-authors">
+              • Secured NVIDIA Academic Grant and collaborated with NVIDIA AI Technology Center (NVAITC)<br/>
+              • Designed QNN/QLSTM architectures for typhoon and solar forecasting<br/>
+              • Built end-to-end pipelines on A100/H100 using CUDA-Q, cuQuantum, PyTorch Lightning<br/>
+              • Led LLM-based forecasting experiments with reproducible evaluation pipelines
+            </div>
+          </div>
+          <span class="pub-badge published">Current</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2023–2024</div>
+          <div>
+            <div class="pub-title">AI / Computer Vision Intern</div>
+            <div class="pub-venue">Uni-President Information Corp. · Taipei</div>
+            <div class="pub-authors">
+              • Developed real-time object detection for retail inventory tracking (NVIDIA Metropolis)<br/>
+              • Built facial recognition system for personalized customer interaction<br/>
+              • Deployed scalable CV pipelines using AWS &amp; Google Cloud
+            </div>
+          </div>
+          <span class="pub-badge conference">Industry</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2018–2021</div>
+          <div>
+            <div class="pub-title">Deep Learning Software Engineer</div>
+            <div class="pub-venue">New Era AI Robotics · New Kinpo Group</div>
+            <div class="pub-authors">
+              • Built autonomous robotics systems using ROS (navigation, mapping, obstacle avoidance)<br/>
+              • Developed CV pipelines: detection, tracking, face recognition, activity recognition<br/>
+              • Led NLP systems for smart speakers (BERT, multilingual STT &amp; QA)<br/>
+              • Optimized real-time inference using TensorRT across embedded systems
+            </div>
+          </div>
+          <span class="pub-badge published">Industry</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2021–2026</div>
+          <div>
+            <div class="pub-title">Teaching Assistant · Artificial Intelligence</div>
+            <div class="pub-venue">Chung Yuan Christian University</div>
+            <div class="pub-authors">
+              • Delivered lectures, guided projects, and mentored students in AI &amp; Deep Learning<br/>
+              • Supported multiple courses including ML, DL, and Big Data Analytics
+            </div>
+          </div>
+          <span class="pub-badge review">Academic</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2022–2023</div>
+          <div>
+            <div class="pub-title">Professor · Machine Learning &amp; Signal Processing</div>
+            <div class="pub-venue">Technological Institute of the Philippines</div>
+            <div class="pub-authors">
+              • Taught 120+ students across ML and signal processing courses<br/>
+              • Designed curriculum bridging theory with applied AI systems
+            </div>
+          </div>
+          <span class="pub-badge review">Teaching</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2015–2016</div>
+          <div>
+            <div class="pub-title">Test Engineer</div>
+            <div class="pub-venue">ROHM Electronics Philippines</div>
+            <div class="pub-authors">
+              • Improved semiconductor production quality via fault detection analysis<br/>
+              • Optimized signal processing pipelines for chip validation systems
+            </div>
+          </div>
+          <span class="pub-badge conference">Engineering</span>
         </div>
 
       </div>

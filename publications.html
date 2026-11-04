@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Publications | Christian Lian Paulo Perez Rioflorido</title>
+  <meta name="description" content="Ph.D. candidate at Chung Yuan Christian University researching quantum AI and deep learning for spatiotemporal forecasting of renewable energy and typhoons. NVIDIA Academic Grant recipient."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Christian Lian Paulo Perez Rioflorido | Quantum AI Researcher"/>
+  <meta property="og:description" content="Quantum AI and deep learning for resilient power systems: typhoon, wind, and solar forecasting on NVIDIA HPC."/>
+  <meta property="og:url" content="https://tianpaul01.github.io/publications.html"/>
+  <meta name="theme-color" content="#0a0f1e"/>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a0f1e'/%3E%3Ctext x='50' y='66' font-size='46' text-anchor='middle' fill='%23c9a84c' font-family='Georgia,serif'%3ECR%3C/text%3E%3C/svg%3E"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --navy: #0a0f1e;
+      --navy-mid: #121929;
+      --gold: #c9a84c;
+      --gold-light: #e8c97a;
+      --text-main: #e8e4da;
+      --text-muted: #a8a6a6;
+      --border: rgba(201,168,76,0.18);
+      --section-gap: 120px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--navy); color: var(--text-main); line-height: 1.7; overflow-x: hidden; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 22px 60px;
+      background: rgba(10,15,30,0.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      animation: fadeDown 0.8s ease forwards;
+    }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; letter-spacing: 0.05em; color: var(--gold); text-decoration: none; }
+    .nav-links { display: flex; gap: 30px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--text-muted); font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.3s; }
+    .nav-links a:hover { color: var(--gold); }
+
+    /* HERO */
+    #hero { min-height: 100vh; display: flex; align-items: center; padding: 140px 60px 80px; position: relative; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(ellipse 60% 60% at 80% 40%, rgba(201,168,76,0.07) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 20% 80%, rgba(201,168,76,0.04) 0%, transparent 60%); }
+    .hero-grid-lines { position: absolute; inset: 0; z-index: 0; background-image: linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px); background-size: 80px 80px; mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent); }
+    .hero-content { position: relative; z-index: 1; max-width: 860px; }
+    .hero-eyebrow { font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; display: flex; align-items: center; gap: 12px; animation: fadeUp 0.9s 0.2s ease both; }
+    .hero-eyebrow::before { content: ''; display: block; width: 40px; height: 1px; background: var(--gold); }
+    .hero-name { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 7vw, 5.8rem); font-weight: 300; line-height: 1.05; animation: fadeUp 0.9s 0.35s ease both; }
+    .hero-name em { font-style: normal; color: var(--gold); }
+    .hero-tagline { font-size: 1.05rem; color: var(--text-muted); max-width: 600px; margin-top: 24px; font-weight: 300; animation: fadeUp 0.9s 0.5s ease both; }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; animation: fadeUp 0.9s 0.6s ease both; }
+    .badge { font-size: 0.72rem; padding: 6px 14px; border: 1px solid var(--border); color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; }
+    .hero-actions { display: flex; gap: 16px; margin-top: 40px; flex-wrap: wrap; animation: fadeUp 0.9s 0.7s ease both; }
+    .btn-primary { padding: 14px 36px; background: var(--gold); color: var(--navy); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: background 0.3s, transform 0.2s; }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .btn-outline { padding: 14px 36px; border: 1px solid var(--border); color: var(--text-main); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: border-color 0.3s, color 0.3s, transform 0.2s; }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+    /* SECTIONS */
+    section { padding: var(--section-gap) 60px; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label { font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+    .section-label::after { content: ''; flex: 1; max-width: 60px; height: 1px; background: var(--gold); }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; line-height: 1.15; margin-bottom: 56px; }
+    .divider { border: none; border-top: 1px solid var(--border); margin: 0; }
+
+    /* ABOUT */
+    #about { background: var(--navy-mid); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 80px; align-items: start; }
+    .about-photo-wrap { position: relative; }
+    .about-photo-frame { width: 100%; aspect-ratio: 3/4; background: linear-gradient(135deg, #1a2035 0%, #0f1628 100%); border: 1px solid var(--border); display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 0.9rem; color: var(--text-muted); letter-spacing: 0.1em; text-align: center; gap: 12px; overflow: hidden; }
+    .about-photo-img { width: 100%; height: 100%; object-fit: cover; }
+    .about-photo-accent { position: absolute; bottom: -16px; right: -16px; width: 60%; height: 60%; border: 1px solid rgba(201,168,76,0.3); z-index: -1; }
+    .about-text p { color: var(--text-muted); margin-bottom: 18px; font-weight: 300; font-size: 0.97rem; }
+    .about-links { display: flex; gap: 14px; margin-top: 28px; flex-wrap: wrap; }
+    .about-link { font-size: 0.75rem; padding: 8px 18px; border: 1px solid var(--border); color: var(--text-muted); text-decoration: none; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.3s, border-color 0.3s; }
+    .about-link:hover { color: var(--gold); border-color: var(--gold); }
+    .about-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 48px; padding-top: 40px; border-top: 1px solid var(--border); }
+    .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 300; color: var(--gold); line-height: 1; }
+    .stat-label { font-size: 0.78rem; color: var(--text-muted); letter-spacing: 0.1em; margin-top: 6px; }
+
+    /* SKILLS */
+    .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+    .skill-card { background: var(--navy-mid); padding: 36px 32px; border: 1px solid transparent; transition: border-color 0.35s, transform 0.35s; position: relative; overflow: hidden; }
+    .skill-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--gold); transition: height 0.4s ease; }
+    .skill-card:hover { border-color: var(--border); transform: translateY(-4px); }
+    .skill-card:hover::before { height: 100%; }
+    .skill-icon { font-size: 1.8rem; margin-bottom: 18px; display: block; }
+    .skill-name { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600; margin-bottom: 10px; }
+    .skill-desc { font-size: 0.86rem; color: var(--text-muted); line-height: 1.65; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px; }
+    .tag { font-size: 0.7rem; padding: 4px 10px; border: 1px solid var(--border); color: var(--text-muted); letter-spacing: 0.07em; }
+
+    /* EDUCATION / EXPERIENCE / PUBLICATIONS (shared pub-list styles) */
+    #education, #publications { background: var(--navy-mid); }
+    .pub-list { display: flex; flex-direction: column; }
+    .pub-item { display: grid; grid-template-columns: 64px 1fr auto; gap: 28px; align-items: start; padding: 32px 0; border-bottom: 1px solid var(--border); }
+    .pub-item:first-child { border-top: 1px solid var(--border); }
+    #education .pub-item, #experience .pub-item { grid-template-columns: 130px 1fr auto; }
+    .pub-year { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--gold); padding-top: 4px; }
+    .pub-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; line-height: 1.35; margin-bottom: 7px; }
+    .pub-title a { color: inherit; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.3s, color 0.3s; }
+    .pub-title a:hover { color: var(--gold); border-color: var(--gold); }
+    .pub-venue { font-size: 0.82rem; color: var(--gold-light); margin-bottom: 4px; }
+    .pub-authors { font-size: 0.8rem; color: var(--text-muted); }
+    .pub-badge { font-size: 0.65rem; padding: 3px 10px; letter-spacing: 0.1em; text-transform: uppercase; align-self: flex-start; margin-top: 4px; white-space: nowrap; }
+    .pub-badge.review { border: 1px solid rgba(201,168,76,0.4); color: var(--gold); }
+    .pub-badge.published { border: 1px solid rgba(100,200,100,0.3); color: #7ec87e; }
+    .pub-badge.conference { border: 1px solid rgba(100,160,220,0.4); color: #7ab4e8; }
+
+
+    /* ABSTRACTS */
+    .abstract { margin-top: 12px; }
+    .abstract summary { cursor: pointer; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); list-style: none; display: inline-flex; align-items: center; gap: 8px; }
+    .abstract summary::-webkit-details-marker { display: none; }
+    .abstract summary::before { content: '+'; display: inline-block; width: 14px; text-align: center; border: 1px solid var(--border); line-height: 14px; }
+    .abstract[open] summary::before { content: '\2212'; }
+    .abstract p { margin-top: 12px; padding-left: 14px; border-left: 1px solid var(--border); font-size: 0.85rem; color: var(--text-muted); font-weight: 300; line-height: 1.7; max-width: 760px; }
+
+
+    /* MULTI-PAGE */
+    .nav-links a.active { color: var(--gold); }
+    section.page-first { padding-top: 150px; min-height: calc(100vh - 110px); background: var(--navy) !important; }
+    @media (max-width: 900px) { section.page-first { padding-top: 120px; } }
+
+    /* NAV TOGGLE / CV LINK */
+    .nav-toggle { display: none; background: none; border: 1px solid var(--border); color: var(--gold); width: 42px; height: 38px; font-size: 1.2rem; cursor: pointer; }
+    .nav-links a.nav-cv { color: var(--gold); border: 1px solid var(--border); padding: 6px 14px; }
+    .nav-links a.nav-cv:hover { border-color: var(--gold); }
+    .hero-open { margin-top: 28px; font-size: 0.85rem; color: var(--text-muted); display: flex; align-items: center; gap: 10px; animation: fadeUp 0.9s 0.8s ease both; }
+    .hero-open::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #7ec87e; box-shadow: 0 0 0 4px rgba(126,200,126,0.15); flex-shrink: 0; }
+
+    /* RESEARCH FOCUS */
+    .research-focus { margin-top: 32px; padding: 24px 28px; border: 1px solid var(--border); background: linear-gradient(135deg, rgba(201,168,76,0.05) 0%, transparent 70%); }
+    .research-focus-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+    .research-focus ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .research-focus li { font-size: 0.92rem; color: var(--text-main); font-weight: 300; padding-left: 18px; position: relative; line-height: 1.6; }
+    .research-focus li::before { content: ''; position: absolute; left: 0; top: 0.7em; width: 8px; height: 1px; background: var(--gold); }
+    .research-focus li strong { font-weight: 500; color: var(--gold-light); }
+    .form-note { font-size: 0.78rem; color: var(--text-muted); }
+
+    /* SUBSECTION TITLES */
+    .pub-subsection-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: var(--text-main);
+      margin: 56px 0 0 0;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .pub-subsection-title::before { content: ''; display: block; width: 24px; height: 1px; background: var(--gold); }
+    .pub-subsection-title.first { margin-top: 0; }
+
+    /* PEER REVIEW BANNER */
+    .reviewer-banner {
+      margin-top: 48px;
+      padding: 28px 32px;
+      border: 1px solid var(--border);
+      background: linear-gradient(135deg, rgba(201,168,76,0.04) 0%, transparent 60%);
+      display: flex;
+      align-items: flex-start;
+      gap: 22px;
+    }
+    .reviewer-banner-icon { color: var(--gold); font-size: 1.6rem; flex-shrink: 0; margin-top: 2px; }
+    .reviewer-banner-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+    .reviewer-banner-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--text-main); margin-bottom: 10px; }
+    .reviewer-banner-title.spaced { margin-top: 20px; }
+    .reviewer-journals { display: flex; flex-wrap: wrap; gap: 8px; }
+    .reviewer-journal-tag { font-size: 0.75rem; padding: 5px 14px; border: 1px solid rgba(201,168,76,0.3); color: var(--gold-light); letter-spacing: 0.06em; }
+
+    /* HONORS */
+    .honors-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; }
+    .honor-card { background: var(--navy-mid); padding: 28px 32px; border-left: 3px solid transparent; transition: border-color 0.3s; }
+    .honor-card:hover { border-color: var(--gold); }
+    .honor-year { font-size: 0.72rem; color: var(--gold); letter-spacing: 0.12em; margin-bottom: 8px; }
+    .honor-title { font-size: 0.92rem; font-weight: 500; line-height: 1.45; }
+    .honor-org { font-size: 0.78rem; color: var(--text-muted); margin-top: 4px; }
+
+    /* CONTACT */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; }
+    .contact-info p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 40px; }
+    .contact-detail { display: flex; flex-direction: column; gap: 16px; }
+    .contact-line { display: flex; align-items: flex-start; gap: 14px; font-size: 0.88rem; color: var(--text-muted); }
+    .contact-line span:first-child { color: var(--gold); font-size: 1rem; flex-shrink: 0; margin-top: 2px; }
+    .contact-line a { color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+    .contact-line a:hover { color: var(--gold); }
+    .contact-form { display: flex; flex-direction: column; gap: 20px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .form-group { display: flex; flex-direction: column; gap: 8px; }
+    .form-group label { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
+    .form-group input, .form-group textarea { background: var(--navy-mid); border: 1px solid var(--border); color: var(--text-main); padding: 14px 18px; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; outline: none; transition: border-color 0.3s; resize: none; }
+    .form-group input:focus, .form-group textarea:focus { border-color: var(--gold); }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: #777; }
+    .form-submit { padding: 16px 40px; background: var(--gold); color: var(--navy); border: none; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; cursor: pointer; transition: background 0.3s, transform 0.2s; align-self: flex-start; }
+    .form-submit:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer { padding: 40px 60px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: var(--text-muted); }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--gold); font-weight: 600; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+    .footer-links a:hover { color: var(--gold); }
+
+    /* ANIMATIONS */
+    @keyframes fadeDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* RESPONSIVE */
+    @media (max-width: 1100px) {
+      .nav-links { gap: 18px; }
+      .nav-links a { font-size: 0.75rem; }
+    }
+    @media (max-width: 1000px) {
+      .nav-toggle { display: block; }
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; background: rgba(10,15,30,0.97); border-bottom: 1px solid var(--border); padding: 8px 24px 16px; }
+      nav.open .nav-links { display: flex; }
+      .nav-links li { border-bottom: 1px solid var(--border); }
+      .nav-links li:last-child { border-bottom: none; }
+      .nav-links a { display: block; padding: 14px 0; font-size: 0.85rem; }
+      .nav-links a.nav-cv { border: none; padding: 14px 0; }
+    }
+    @media (max-width: 900px) {
+      nav { padding: 18px 24px; }
+      section { padding: 80px 24px; }
+      #hero { padding: 120px 24px 60px; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+      .skills-grid, .honors-grid { grid-template-columns: 1fr 1fr; }
+      .pub-item, #education .pub-item, #experience .pub-item { grid-template-columns: 1fr; gap: 8px; }
+      .pub-badge { display: none; }
+      footer { flex-direction: column; gap: 16px; text-align: center; }
+    }
+    @media (max-width: 600px) {
+      .skills-grid, .honors-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .about-stats { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html">CR</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" onclick="toggleNav()">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="publications.html" class="active">Publications</a></li>
+      <li><a href="honors.html">Honors</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="Rioflorido_CV.pdf" class="nav-cv" target="_blank" rel="noopener">CV</a></li>
+    </ul>
+  </nav>
+
+  <section id="publications" class="page-first">
+    <div class="section-inner">
+      <div class="section-label">Research</div>
+      <h2 class="section-title">Publications</h2>
+
+      <!-- JOURNAL PAPERS -->
+      <div class="pub-list">
+
+        <div class="pub-item">
+          <div class="pub-year">2026</div>
+          <div>
+            <div class="pub-title"><a href="https://doi.org/10.1016/j.mlwa.2026.100955" target="_blank" rel="noopener">Adaptive Diversity-Enhanced Phasor Particle Swarm Optimization–Differential Evolution Hybrid for Unimodal–Multimodal Problems with Engineering Applications</a></div>
+            <div class="pub-venue">Machine Learning with Applications, vol. 25, pp. 1–25, July 2026</div>
+            <div class="pub-authors"><strong>C. L. P. P. Rioflorido</strong> &amp; Y.-Y. Hong · DOI: 10.1016/j.mlwa.2026.100955</div>
+            <details class="abstract"><summary>Abstract</summary><p>Proposes CQPPSO-DE, a hybrid metaheuristic that pairs Phasor Particle Swarm Optimization (PPSO) with success-history adaptive Differential Evolution (DE). An ablation study on 64 benchmark functions shows both components are essential: adding DE to the PPSO baseline gave statistically significant gains on 59 of the 64 problems. Two secondary mechanisms refine performance on specific landscapes: Lorenz chaotic initialization improves initial population diversity (most helpful on unimodal and separable problems), and a quantum-inspired random walk adds targeted perturbation on multimodal problems where PPSO tends to converge prematurely. Evaluated on the CEC2021 and CEC2022 suites and six engineering design problems, CQPPSO-DE is competitive with state-of-the-art metaheuristics.</p></details>
+          </div>
+          <span class="pub-badge published">Published</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2026</div>
+          <div>
+            <div class="pub-title"><a href="https://doi.org/10.1016/j.energy.2026.141900" target="_blank" rel="noopener">Hybrid Temporal Fusion Transformer and Quantum Long Short-Term Memory Network for Typhoon Forecasting at a Wind Power Farm</a></div>
+            <div class="pub-venue">Energy, vol. 360, pp. 1–13, July 2026</div>
+            <div class="pub-authors">Y.-Y. Hong, <strong>C. L. P. P. Rioflorido</strong>, Y.-Y. Wang, T.-C. Huang, S. See, H.-P. Van, &amp; M.-T. Li · DOI: 10.1016/j.energy.2026.141900</div>
+            <details class="abstract"><summary>Abstract</summary><p>Proposes the Temporal Fusion Transformer–Quantum Long Short-Term Memory (TFT-QLSTM) network to improve forecasting for wind farms during typhoons, with a case study of the Gaomei wind farm in Taichung. The framework produces joint 24-hour-ahead forecasts of seven typhoon and wind farm variables, is optimized with Chaos Quantum Energy Valley Optimization (CQEVO), and remains interpretable through the TFT's variable selection network.</p></details>
+          </div>
+          <span class="pub-badge published">Published</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2026</div>
+          <div>
+            <div class="pub-title"><a href="https://doi.org/10.1109/TPWRS.2025.3626336" target="_blank" rel="noopener">A Hybrid Graph-Quantum Neural Network for Solar Irradiance Forecasting Using Chaotic Swarm Optimization and Cauchy Distribution</a></div>
+            <div class="pub-venue">IEEE Transactions on Power Systems, pp. 1619–1631, May 2026</div>
+            <div class="pub-authors">Y.-Y. Hong, <strong>C. L. P. P. Rioflorido</strong>, &amp; Y.-Y. Wang · DOI: 10.1109/TPWRS.2025.3626336</div>
+            <details class="abstract"><summary>Abstract</summary><p>Presents a 24-hour-ahead global horizontal irradiance (GHI) forecasting framework for power system applications. A Hybrid Graph-Quantum Neural Network (HGQNN) combines graph convolution networks and quantum neural networks to capture spatial and temporal relationships in solar irradiance data and to quantify forecast uncertainty. The architecture and hyperparameters are tuned with a proposed Chaotic Phasor Particle Swarm Optimization with Cauchy Distribution (CPPSO-CD). Simulations show better accuracy than traditional approaches such as back-propagation neural networks, CNNs, LSTMs, and self-attention-based models.</p></details>
+          </div>
+          <span class="pub-badge published">Published</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2024</div>
+          <div>
+            <div class="pub-title"><a href="https://doi.org/10.1016/j.eswa.2023.122645" target="_blank" rel="noopener">Hybrid Deep Learning and Quantum-Inspired Neural Network for Day-Ahead Spatiotemporal Wind Speed Forecasting</a></div>
+            <div class="pub-venue">Expert Systems with Applications, vol. 241, pp. 1–11, May 2024</div>
+            <div class="pub-authors">Y.-Y. Hong, <strong>C. L. P. P. Rioflorido</strong>, &amp; W. Zhang · DOI: 10.1016/j.eswa.2023.122645</div>
+            <details class="abstract"><summary>Abstract</summary><p>Develops a day-ahead spatiotemporal wind speed forecasting model that cascades parallel convolutional neural networks with an LSTM and a quantum-inspired neural network (QINN). The model is tuned by two nested loops, with quantum particle swarm optimization (QPSO) in the outer loop selecting the model structure and hyperparameters. Simulation results show it outperforms competing methods for 24-hour-ahead wind speed forecasting.</p></details>
+          </div>
+          <span class="pub-badge published">Published</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2019</div>
+          <div>
+            <div class="pub-title"><a href="https://doi.org/10.1016/j.apenergy.2019.05.044" target="_blank" rel="noopener">A Hybrid Deep Learning-Based Neural Network for 24-Hour Ahead Wind Power Forecasting</a></div>
+            <div class="pub-venue">Applied Energy, vol. 250, pp. 530–539, Sept. 2019</div>
+            <div class="pub-authors">Y.-Y. Hong &amp; <strong>C. L. P. P. Rioflorido</strong> · DOI: 10.1016/j.apenergy.2019.05.044</div>
+            <details class="abstract"><summary>Abstract</summary><p>Wind power output is uncertain because wind speed fluctuates, so accurate prediction is important for efficient power system operation. This paper proposes a hybrid deep learning network in which a convolutional neural network is cascaded with a radial basis function neural network that uses a double Gaussian function as its activation function. Simulations show it is more accurate than traditional methods for 24-hour-ahead wind power forecasting.</p></details>
+          </div>
+          <span class="pub-badge published">Published</span>
+        </div>
+
+      </div>
+
+      <!-- CONFERENCE PAPERS -->
+      <div class="pub-subsection-title">Select Conference Proceedings</div>
+      <div class="pub-list">
+
+        <div class="pub-item">
+          <div class="pub-year">2026</div>
+          <div>
+            <div class="pub-title">Temporal Fusion Transformer Integrated with Grey Wolf Optimizer for 24-hour Ahead Load Forecasting</div>
+            <div class="pub-venue">Preprints of the 23rd IFAC World Congress, Busan, Republic of Korea, Aug. 23–28, 2026</div>
+            <div class="pub-authors">Y.-Y. Hong, <strong>C. L. P. P. Rioflorido</strong>, C. M. Chen, C. J. Yang, J. M. F. Centeno, H. R. Limjoco, L. V. Gulmatico, M. J. N. L. Manalo, &amp; J. L. C. Onia</div>
+            <details class="abstract"><summary>Abstract</summary><p>This paper proposes a 24-hour ahead load forecasting framework that integrates the Temporal Fusion Transformer (TFT) with the Grey Wolf Optimizer (GWO) to address forecasting challenges in Taiwan’s power system, which is affected by renewable energy integration, industrial variability, and extreme weather. The TFT component captures multi-scale temporal dependencies and provides interpretability, while the GWO is employed for systematic hyperparameter optimization to improve accuracy and robustness. The framework is validated using nine years (2017–2025) of Taiwan Power Company operational data, including load profiles, meteorological variables, and economic indicators. Compared with benchmark models, the proposed TFT-GWO achieves superior results, with MAE (mean absolute error), RMSE (root mean squared error), and R2 (coefficient of determination) of 0.0145, 0.0220, and 0.9390, respectively. The results demonstrate that the proposed approach supports more reliable unit commitment, reserve allocation, and day-ahead market operations, highlighting the effectiveness of combining transformer-based architectures with metaheuristic optimization in power system forecasting.</p></details>
+          </div>
+          <span class="pub-badge conference">Conference</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2025</div>
+          <div>
+            <div class="pub-title">Classification of Photovoltaic Faults using CatBoost Classifier Optimized by QPSO</div>
+            <div class="pub-venue">2nd International Conference on "Green Solutions and Emerging Technologies for Sustainability" (GSETS 2025), Ho Chi Minh City, Vietnam, pp. 297–308</div>
+            <div class="pub-authors">Y.-Y. Hong, <strong>C. L. P. P. Rioflorido</strong>, &amp; H.-P. Van</div>
+            <details class="abstract"><summary>Abstract</summary><p>Photovoltaic (PV) systems are an essential source of renewable energy generation, but their performance is sensitive to a combination of component faults. Thus, the reliability of PV systems can be ensured with the assistance of fault detection and classification. This work presents a new technique for fault classification using CatBoost, a machine learning algorithm that lies in a family of gradient boosting decision trees (GBDT), which is chosen owing to its performance with complex data sets and categorical features. However, its classification performance is dependent on the hyperparameter setting of the model. This paper implements Quantum Particle Swarm Optimization (QPSO) algorithm to optimize hyperparameter values. The hybrid technique proposed is referred to as CatBoost-QPSO and is applied to a dataset that classifies 10 fault types: line-to-line faults, module open-circuit and short-circuit faults in a string and both strings, partial shading conditions in a string and both strings and normal operating conditions. To assess the performance of the CatBoost-QPSO procedure, various benchmark metrics (accuracy, precision, recall, and F1 score) are utilized. The proposed method achieves an accuracy of 93.27%, which indicates that the method could be efficient and robust to compute. These findings underscore the significance of leveraging both advanced boosting techniques with hyper-optimization methods for fault classification towards enhancing PV systems. This research found a new way to increase the reliability and operational efficiency of the renewable energy infrastructure, which will cut down the downtime and enable maximum energy generation.</p></details>
+          </div>
+          <span class="pub-badge conference">Conference</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2023</div>
+          <div>
+            <div class="pub-title"><a href="https://doi.org/10.1109/ISGTEUROPE56780.2023.10407345" target="_blank" rel="noopener">A Deep CNN-LSTM Model Tuned by PPSO for Spatiotemporal Solar GHI Forecasting</a></div>
+            <div class="pub-venue">2023 IEEE PES Innovative Smart Grid Technologies Europe (ISGT EUROPE), Grenoble, France, Oct. 2023, pp. 1–5</div>
+            <div class="pub-authors">Y.-Y. Hong &amp; <strong>C. L. P. P. Rioflorido</strong> · DOI: 10.1109/ISGTEUROPE56780.2023.10407345</div>
+            <details class="abstract"><summary>Abstract</summary><p>Proposes a deep learning model that combines a convolutional neural network and an LSTM for 24-hour-ahead solar GHI forecasting. It uses spatiotemporal information, capturing spatial and temporal dependencies from multiple locations and time windows. Phasor particle swarm optimization (PPSO), a PSO variant that represents particles with complex numbers, tunes the number of layers, filters, and neurons. Tested on data from several countries, the model outperforms baseline methods in accuracy and robustness.</p></details>
+          </div>
+          <span class="pub-badge conference">Conference</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2023</div>
+          <div>
+            <div class="pub-title"><a href="https://doi.org/10.1109/TENCON58879.2023.10322315" target="_blank" rel="noopener">Design of a Non-Invasive Egg Sexing Device Utilizing Artificial Intelligence for Duck Species</a></div>
+            <div class="pub-venue">TENCON 2023 — IEEE Region 10 Conference, Chiang Mai, Thailand, Oct. 31 – Nov. 3, 2023, pp. 1169–1174</div>
+            <div class="pub-authors">S. U. Arenas, P. J. R. Billones, J. C. V. Lao, J. A. C. Mercado, I. D. G. Sy, &amp; <strong>C. L. P. P. Rioflorido</strong> · DOI: 10.1109/TENCON58879.2023.10322315</div>
+            <details class="abstract"><summary>Abstract</summary><p>Introduces a non-invasive device that combines AI, spectroscopy, and computer vision to determine the sex of duck embryos inside eggs. Plumage color serves as the sex indicator, and a hybrid CNN and gated recurrent unit (GRU) model works alongside the spectroscopic analysis. Experiments report 98.68% sexing accuracy with an average processing time of about 37 ms. Hatchability stayed at 74.80% across a population of 500 eggs, indicating that spectroscopy does not harm egg viability. The work offers a more sustainable way to manage male ducklings in the industry.</p></details>
+          </div>
+          <span class="pub-badge conference">Conference</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2022</div>
+          <div>
+            <div class="pub-title"><a href="https://doi.org/10.1109/IET-ICETA56553.2022.9971559" target="_blank" rel="noopener">A Short-Term Spatiotemporal Wind Speed Forecasting Using CNN Optimized by PSO</a></div>
+            <div class="pub-venue">2022 IET International Conference on Engineering Technologies and Applications (IET-ICETA), Changhua, Taiwan, Oct. 14–16, 2022, pp. 1–2</div>
+            <div class="pub-authors">Y.-Y. Hong, J. B. D. Santos, S.-S. Lin, Y.-D. Lee, J.-H. Wang, J.-L. Jiang, <strong>C. L. P. P. Rioflorido</strong>, &amp; J.-N. Yeh · DOI: 10.1109/IET-ICETA56553.2022.9971559</div>
+            <details class="abstract"><summary>Abstract</summary><p>Since precise wind speed forecasts can be converted directly into accurate wind power predictions, wind speed forecasting is essential for the operation of power systems. A spatiotemporal wind speed prediction model based on the 2D Convolutional Neural Network (2D CNN) optimized by the Particle Swarm optimization (PSO) is proposed in this paper. In order for the 2D CNN to establish parameters adaptively, the hyperparameters (kernel size and length, dropout rate, and the number of input cells in the hidden layers) are optimized by PSO. Five wind speed datasets in Taiwan were used for this study. The results validate the applicability of the proposed method.</p></details>
+          </div>
+          <span class="pub-badge conference">Conference</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2022</div>
+          <div>
+            <div class="pub-title"><a href="https://doi.org/10.1109/IET-ICETA56553.2022.9971530" target="_blank" rel="noopener">One-Hour Ahead Spatio-Temporal Solar GHI Forecasting Using Long Short-Term Memory</a></div>
+            <div class="pub-venue">2022 IET International Conference on Engineering Technologies and Applications (IET-ICETA), Changhua, Taiwan, Oct. 14–16, 2022</div>
+            <div class="pub-authors">Y.-Y. Hong, Y.-T. Pan, C.-C. Hsu, J. B. D. Santos, &amp; <strong>C. L. P. P. Rioflorido</strong> · DOI: 10.1109/IET-ICETA56553.2022.9971530</div>
+            <details class="abstract"><summary>Abstract</summary><p>Studies short-term GHI forecasting at a single target site using time-series data from surrounding sites. An LSTM network integrates the spatial and temporal information, and particle swarm optimization (PSO) tunes its hyperparameters and time step. Simulations show the method is more accurate than existing approaches for 1-hour-ahead GHI forecasting.</p></details>
+          </div>
+          <span class="pub-badge conference">Conference</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2022</div>
+          <div>
+            <div class="pub-title"><a href="https://doi.org/10.1109/IET-ICETA56553.2022.9971667" target="_blank" rel="noopener">Soft Sensing Measurement of Dissolved Ammonia Nitrogen in Tank-Based Eel Aquaculture Systems Utilizing Deep Learning</a></div>
+            <div class="pub-venue">2022 IET International Conference on Engineering Technologies and Applications (IET-ICETA), Changhua, Taiwan, Oct. 14–16, 2022</div>
+            <div class="pub-authors">D. J. A. Amora, J. V. Apan, D. N. C. Layosa, R. C. Sarmiento, J. J. Tugado, &amp; <strong>C. L. P. P. Rioflorido</strong> · DOI: 10.1109/IET-ICETA56553.2022.9971667</div>
+            <details class="abstract"><summary>Abstract</summary><p>Japanese eels are susceptible to low concentrations of dissolved ammonia nitrogen (NH3−N). To provide proper intervention, measuring the dissolved ammonia nitrogen in the tank-based eel aquaculture is crucial. However, existing laboratory methods and digital sensors are time-consuming and expensive solutions. This study proposed an Attentive Interpretable Tabular Learning (TabNet) Deep Learning soft-sensing model to predict dissolved NH3-N concentrations. The prediction model is based on input parameters: water temperature, conductivity, pH, and dissolved oxygen. The datasets are gathered from the Global Environment Monitoring System (GEMStat), a water quality parameter database. The performance of the proposed Deep Learning model was compared with Feed-forward neural network (F-NN) and One Dimensional-CNN. The models were evaluated using statistical methods: R-squared (R2), Mean Absolute Error (MAE), and Root Mean Squared Error (RMSE). The simulation results showed that TabNet performed better in predicting dissolved NH3-N concentrations.</p></details>
+          </div>
+          <span class="pub-badge conference">Conference</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2022</div>
+          <div>
+            <div class="pub-title"><a href="https://doi.org/10.1109/IET-ICETA56553.2022.9971564" target="_blank" rel="noopener">Design of a Household Consumption Based Water Leak Detection System Utilizing Machine Learning Algorithm</a></div>
+            <div class="pub-venue">2022 IET International Conference on Engineering Technologies and Applications (IET-ICETA), Changhua, Taiwan, Oct. 14–16, 2022</div>
+            <div class="pub-authors">D. J. A. Amora, M. A. V. Janapin, B. A. M. Calayag, <strong>C. L. P. P. Rioflorido</strong>, N. M. Estur, &amp; P. A. L. Villegas · DOI: 10.1109/IET-ICETA56553.2022.9971564</div>
+            <details class="abstract"><summary>Abstract</summary><p>Water is a limited resource; thus, every drop matters. Leaks in water distribution networks (WDNs) and residences contribute considerably to water utility losses. The goal of this research is to design and build a water leak-detecting system based on home use. Based on historical water consumption and experimental flow rate water consumption data, this research developed a Bidirectional LSTM (BiLSTM) machine learning (ML) approach for building a water leakage detection model. The BiLSTM model is compared against Gated recurrent units (GRU) and Autoregressive models on the following performance metrics: mean squared error (MSE), root mean squared error (RMSE), mean absolute percentage error (MAPE), and mean absolute error (MAE). According to the data, the BiLSTM model performed better overall in water leak detection.</p></details>
+          </div>
+          <span class="pub-badge conference">Conference</span>
+        </div>
+
+      </div>
+
+      <!-- PEER REVIEW SERVICE -->
+      <div class="reviewer-banner">
+        <div class="reviewer-banner-icon">🔍</div>
+        <div class="reviewer-banner-content">
+          <div class="reviewer-banner-label">Academic Service</div>
+          <div class="reviewer-banner-title">Journal Reviewer</div>
+          <div class="reviewer-journals">
+            <span class="reviewer-journal-tag">Applied Soft Computing (Elsevier)</span>
+            <span class="reviewer-journal-tag">Energy Reports (Elsevier)</span>
+            <span class="reviewer-journal-tag">Soft Computing (Elsevier)</span>
+            <span class="reviewer-journal-tag">Discover Applied Sciences (Springer Nature)</span>
+            <span class="reviewer-journal-tag">Applied Energy (Elsevier)</span>
+            <span class="reviewer-journal-tag">IEEE Sensors Journal</span>
+          </div>
+          <div class="reviewer-banner-title spaced">Conference Reviewer / Program Committee</div>
+          <div class="reviewer-journals">
+            <span class="reviewer-journal-tag">2026 IEEE Int'l Conf. on Systems, Man, and Cybernetics (SMC)</span>
+            <span class="reviewer-journal-tag">2025 IEEE Industry Applications Society Annual Meeting (IAS)</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">CR</div>
+    <div>© 2026 Christian Lian Paulo P. Rioflorido · Taoyuan, Taiwan</div>
+    <div class="footer-links">
+      <a href="https://linkedin.com/in/clprioflorido" target="_blank">LinkedIn</a>
+      <a href="https://github.com/tianpaul01" target="_blank">GitHub</a>
+      <a href="https://orcid.org/0000-0001-9841-7389" target="_blank">ORCID</a>
+      <a href="https://scholar.google.com/citations?user=cOfYFAoAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+    </div>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.skill-card, .pub-item, .honor-card');
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach((el, i) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(22px)';
+      el.style.transition = `opacity 0.55s ${Math.min(i * 0.06, 0.5)}s ease, transform 0.55s ${Math.min(i * 0.06, 0.5)}s ease`;
+      revealObserver.observe(el);
+    });
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const f = e.target;
+      const name = (f.first.value + ' ' + f.last.value).trim();
+      const subject = f.subject.value.trim() || 'Inquiry from your website';
+      const body = f.message.value + '\n\n--\n' + name + (f.email.value ? '\n' + f.email.value : '');
+      window.location.href = 'mailto:clprioflorido17@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    }
+
+    function toggleNav() {
+      const nav = document.querySelector('nav');
+      const open = nav.classList.toggle('open');
+      document.querySelector('.nav-toggle').setAttribute('aria-expanded', open);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Education | Christian Lian Paulo Perez Rioflorido</title>
+  <meta name="description" content="Ph.D. candidate at Chung Yuan Christian University researching quantum AI and deep learning for spatiotemporal forecasting of renewable energy and typhoons. NVIDIA Academic Grant recipient."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Christian Lian Paulo Perez Rioflorido | Quantum AI Researcher"/>
+  <meta property="og:description" content="Quantum AI and deep learning for resilient power systems: typhoon, wind, and solar forecasting on NVIDIA HPC."/>
+  <meta property="og:url" content="https://tianpaul01.github.io/education.html"/>
+  <meta name="theme-color" content="#0a0f1e"/>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a0f1e'/%3E%3Ctext x='50' y='66' font-size='46' text-anchor='middle' fill='%23c9a84c' font-family='Georgia,serif'%3ECR%3C/text%3E%3C/svg%3E"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --navy: #0a0f1e;
+      --navy-mid: #121929;
+      --gold: #c9a84c;
+      --gold-light: #e8c97a;
+      --text-main: #e8e4da;
+      --text-muted: #a8a6a6;
+      --border: rgba(201,168,76,0.18);
+      --section-gap: 120px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--navy); color: var(--text-main); line-height: 1.7; overflow-x: hidden; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 22px 60px;
+      background: rgba(10,15,30,0.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      animation: fadeDown 0.8s ease forwards;
+    }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; letter-spacing: 0.05em; color: var(--gold); text-decoration: none; }
+    .nav-links { display: flex; gap: 30px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--text-muted); font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.3s; }
+    .nav-links a:hover { color: var(--gold); }
+
+    /* HERO */
+    #hero { min-height: 100vh; display: flex; align-items: center; padding: 140px 60px 80px; position: relative; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(ellipse 60% 60% at 80% 40%, rgba(201,168,76,0.07) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 20% 80%, rgba(201,168,76,0.04) 0%, transparent 60%); }
+    .hero-grid-lines { position: absolute; inset: 0; z-index: 0; background-image: linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px); background-size: 80px 80px; mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent); }
+    .hero-content { position: relative; z-index: 1; max-width: 860px; }
+    .hero-eyebrow { font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; display: flex; align-items: center; gap: 12px; animation: fadeUp 0.9s 0.2s ease both; }
+    .hero-eyebrow::before { content: ''; display: block; width: 40px; height: 1px; background: var(--gold); }
+    .hero-name { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 7vw, 5.8rem); font-weight: 300; line-height: 1.05; animation: fadeUp 0.9s 0.35s ease both; }
+    .hero-name em { font-style: normal; color: var(--gold); }
+    .hero-tagline { font-size: 1.05rem; color: var(--text-muted); max-width: 600px; margin-top: 24px; font-weight: 300; animation: fadeUp 0.9s 0.5s ease both; }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; animation: fadeUp 0.9s 0.6s ease both; }
+    .badge { font-size: 0.72rem; padding: 6px 14px; border: 1px solid var(--border); color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; }
+    .hero-actions { display: flex; gap: 16px; margin-top: 40px; flex-wrap: wrap; animation: fadeUp 0.9s 0.7s ease both; }
+    .btn-primary { padding: 14px 36px; background: var(--gold); color: var(--navy); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: background 0.3s, transform 0.2s; }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .btn-outline { padding: 14px 36px; border: 1px solid var(--border); color: var(--text-main); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: border-color 0.3s, color 0.3s, transform 0.2s; }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+    /* SECTIONS */
+    section { padding: var(--section-gap) 60px; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label { font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+    .section-label::after { content: ''; flex: 1; max-width: 60px; height: 1px; background: var(--gold); }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; line-height: 1.15; margin-bottom: 56px; }
+    .divider { border: none; border-top: 1px solid var(--border); margin: 0; }
+
+    /* ABOUT */
+    #about { background: var(--navy-mid); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 80px; align-items: start; }
+    .about-photo-wrap { position: relative; }
+    .about-photo-frame { width: 100%; aspect-ratio: 3/4; background: linear-gradient(135deg, #1a2035 0%, #0f1628 100%); border: 1px solid var(--border); display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 0.9rem; color: var(--text-muted); letter-spacing: 0.1em; text-align: center; gap: 12px; overflow: hidden; }
+    .about-photo-img { width: 100%; height: 100%; object-fit: cover; }
+    .about-photo-accent { position: absolute; bottom: -16px; right: -16px; width: 60%; height: 60%; border: 1px solid rgba(201,168,76,0.3); z-index: -1; }
+    .about-text p { color: var(--text-muted); margin-bottom: 18px; font-weight: 300; font-size: 0.97rem; }
+    .about-links { display: flex; gap: 14px; margin-top: 28px; flex-wrap: wrap; }
+    .about-link { font-size: 0.75rem; padding: 8px 18px; border: 1px solid var(--border); color: var(--text-muted); text-decoration: none; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.3s, border-color 0.3s; }
+    .about-link:hover { color: var(--gold); border-color: var(--gold); }
+    .about-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 48px; padding-top: 40px; border-top: 1px solid var(--border); }
+    .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 300; color: var(--gold); line-height: 1; }
+    .stat-label { font-size: 0.78rem; color: var(--text-muted); letter-spacing: 0.1em; margin-top: 6px; }
+
+    /* SKILLS */
+    .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+    .skill-card { background: var(--navy-mid); padding: 36px 32px; border: 1px solid transparent; transition: border-color 0.35s, transform 0.35s; position: relative; overflow: hidden; }
+    .skill-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--gold); transition: height 0.4s ease; }
+    .skill-card:hover { border-color: var(--border); transform: translateY(-4px); }
+    .skill-card:hover::before { height: 100%; }
+    .skill-icon { font-size: 1.8rem; margin-bottom: 18px; display: block; }
+    .skill-name { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600; margin-bottom: 10px; }
+    .skill-desc { font-size: 0.86rem; color: var(--text-muted); line-height: 1.65; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px; }
+    .tag { font-size: 0.7rem; padding: 4px 10px; border: 1px solid var(--border); color: var(--text-muted); letter-spacing: 0.07em; }
+
+    /* EDUCATION / EXPERIENCE / PUBLICATIONS (shared pub-list styles) */
+    #education, #publications { background: var(--navy-mid); }
+    .pub-list { display: flex; flex-direction: column; }
+    .pub-item { display: grid; grid-template-columns: 64px 1fr auto; gap: 28px; align-items: start; padding: 32px 0; border-bottom: 1px solid var(--border); }
+    .pub-item:first-child { border-top: 1px solid var(--border); }
+    #education .pub-item, #experience .pub-item { grid-template-columns: 130px 1fr auto; }
+    .pub-year { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--gold); padding-top: 4px; }
+    .pub-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; line-height: 1.35; margin-bottom: 7px; }
+    .pub-title a { color: inherit; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.3s, color 0.3s; }
+    .pub-title a:hover { color: var(--gold); border-color: var(--gold); }
+    .pub-venue { font-size: 0.82rem; color: var(--gold-light); margin-bottom: 4px; }
+    .pub-authors { font-size: 0.8rem; color: var(--text-muted); }
+    .pub-badge { font-size: 0.65rem; padding: 3px 10px; letter-spacing: 0.1em; text-transform: uppercase; align-self: flex-start; margin-top: 4px; white-space: nowrap; }
+    .pub-badge.review { border: 1px solid rgba(201,168,76,0.4); color: var(--gold); }
+    .pub-badge.published { border: 1px solid rgba(100,200,100,0.3); color: #7ec87e; }
+    .pub-badge.conference { border: 1px solid rgba(100,160,220,0.4); color: #7ab4e8; }
+
+
+    /* ABSTRACTS */
+    .abstract { margin-top: 12px; }
+    .abstract summary { cursor: pointer; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); list-style: none; display: inline-flex; align-items: center; gap: 8px; }
+    .abstract summary::-webkit-details-marker { display: none; }
+    .abstract summary::before { content: '+'; display: inline-block; width: 14px; text-align: center; border: 1px solid var(--border); line-height: 14px; }
+    .abstract[open] summary::before { content: '\2212'; }
+    .abstract p { margin-top: 12px; padding-left: 14px; border-left: 1px solid var(--border); font-size: 0.85rem; color: var(--text-muted); font-weight: 300; line-height: 1.7; max-width: 760px; }
+
+
+    /* MULTI-PAGE */
+    .nav-links a.active { color: var(--gold); }
+    section.page-first { padding-top: 150px; min-height: calc(100vh - 110px); background: var(--navy) !important; }
+    @media (max-width: 900px) { section.page-first { padding-top: 120px; } }
+
+    /* NAV TOGGLE / CV LINK */
+    .nav-toggle { display: none; background: none; border: 1px solid var(--border); color: var(--gold); width: 42px; height: 38px; font-size: 1.2rem; cursor: pointer; }
+    .nav-links a.nav-cv { color: var(--gold); border: 1px solid var(--border); padding: 6px 14px; }
+    .nav-links a.nav-cv:hover { border-color: var(--gold); }
+    .hero-open { margin-top: 28px; font-size: 0.85rem; color: var(--text-muted); display: flex; align-items: center; gap: 10px; animation: fadeUp 0.9s 0.8s ease both; }
+    .hero-open::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #7ec87e; box-shadow: 0 0 0 4px rgba(126,200,126,0.15); flex-shrink: 0; }
+
+    /* RESEARCH FOCUS */
+    .research-focus { margin-top: 32px; padding: 24px 28px; border: 1px solid var(--border); background: linear-gradient(135deg, rgba(201,168,76,0.05) 0%, transparent 70%); }
+    .research-focus-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+    .research-focus ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .research-focus li { font-size: 0.92rem; color: var(--text-main); font-weight: 300; padding-left: 18px; position: relative; line-height: 1.6; }
+    .research-focus li::before { content: ''; position: absolute; left: 0; top: 0.7em; width: 8px; height: 1px; background: var(--gold); }
+    .research-focus li strong { font-weight: 500; color: var(--gold-light); }
+    .form-note { font-size: 0.78rem; color: var(--text-muted); }
+
+    /* SUBSECTION TITLES */
+    .pub-subsection-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: var(--text-main);
+      margin: 56px 0 0 0;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .pub-subsection-title::before { content: ''; display: block; width: 24px; height: 1px; background: var(--gold); }
+    .pub-subsection-title.first { margin-top: 0; }
+
+    /* PEER REVIEW BANNER */
+    .reviewer-banner {
+      margin-top: 48px;
+      padding: 28px 32px;
+      border: 1px solid var(--border);
+      background: linear-gradient(135deg, rgba(201,168,76,0.04) 0%, transparent 60%);
+      display: flex;
+      align-items: flex-start;
+      gap: 22px;
+    }
+    .reviewer-banner-icon { color: var(--gold); font-size: 1.6rem; flex-shrink: 0; margin-top: 2px; }
+    .reviewer-banner-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+    .reviewer-banner-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--text-main); margin-bottom: 10px; }
+    .reviewer-banner-title.spaced { margin-top: 20px; }
+    .reviewer-journals { display: flex; flex-wrap: wrap; gap: 8px; }
+    .reviewer-journal-tag { font-size: 0.75rem; padding: 5px 14px; border: 1px solid rgba(201,168,76,0.3); color: var(--gold-light); letter-spacing: 0.06em; }
+
+    /* HONORS */
+    .honors-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; }
+    .honor-card { background: var(--navy-mid); padding: 28px 32px; border-left: 3px solid transparent; transition: border-color 0.3s; }
+    .honor-card:hover { border-color: var(--gold); }
+    .honor-year { font-size: 0.72rem; color: var(--gold); letter-spacing: 0.12em; margin-bottom: 8px; }
+    .honor-title { font-size: 0.92rem; font-weight: 500; line-height: 1.45; }
+    .honor-org { font-size: 0.78rem; color: var(--text-muted); margin-top: 4px; }
+
+    /* CONTACT */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; }
+    .contact-info p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 40px; }
+    .contact-detail { display: flex; flex-direction: column; gap: 16px; }
+    .contact-line { display: flex; align-items: flex-start; gap: 14px; font-size: 0.88rem; color: var(--text-muted); }
+    .contact-line span:first-child { color: var(--gold); font-size: 1rem; flex-shrink: 0; margin-top: 2px; }
+    .contact-line a { color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+    .contact-line a:hover { color: var(--gold); }
+    .contact-form { display: flex; flex-direction: column; gap: 20px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .form-group { display: flex; flex-direction: column; gap: 8px; }
+    .form-group label { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
+    .form-group input, .form-group textarea { background: var(--navy-mid); border: 1px solid var(--border); color: var(--text-main); padding: 14px 18px; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; outline: none; transition: border-color 0.3s; resize: none; }
+    .form-group input:focus, .form-group textarea:focus { border-color: var(--gold); }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: #777; }
+    .form-submit { padding: 16px 40px; background: var(--gold); color: var(--navy); border: none; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; cursor: pointer; transition: background 0.3s, transform 0.2s; align-self: flex-start; }
+    .form-submit:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer { padding: 40px 60px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: var(--text-muted); }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--gold); font-weight: 600; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+    .footer-links a:hover { color: var(--gold); }
+
+    /* ANIMATIONS */
+    @keyframes fadeDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* RESPONSIVE */
+    @media (max-width: 1100px) {
+      .nav-links { gap: 18px; }
+      .nav-links a { font-size: 0.75rem; }
+    }
+    @media (max-width: 1000px) {
+      .nav-toggle { display: block; }
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; background: rgba(10,15,30,0.97); border-bottom: 1px solid var(--border); padding: 8px 24px 16px; }
+      nav.open .nav-links { display: flex; }
+      .nav-links li { border-bottom: 1px solid var(--border); }
+      .nav-links li:last-child { border-bottom: none; }
+      .nav-links a { display: block; padding: 14px 0; font-size: 0.85rem; }
+      .nav-links a.nav-cv { border: none; padding: 14px 0; }
+    }
+    @media (max-width: 900px) {
+      nav { padding: 18px 24px; }
+      section { padding: 80px 24px; }
+      #hero { padding: 120px 24px 60px; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+      .skills-grid, .honors-grid { grid-template-columns: 1fr 1fr; }
+      .pub-item, #education .pub-item, #experience .pub-item { grid-template-columns: 1fr; gap: 8px; }
+      .pub-badge { display: none; }
+      footer { flex-direction: column; gap: 16px; text-align: center; }
+    }
+    @media (max-width: 600px) {
+      .skills-grid, .honors-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .about-stats { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html">CR</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" onclick="toggleNav()">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="education.html" class="active">Education</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="honors.html">Honors</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="Rioflorido_CV.pdf" class="nav-cv" target="_blank" rel="noopener">CV</a></li>
+    </ul>
+  </nav>
+
+  <section id="education" class="page-first">
+    <div class="section-inner">
+      <div class="section-label">Academic Background</div>
+      <h2 class="section-title">Education</h2>
+      <div class="pub-list">
+
+        <div class="pub-item">
+          <div class="pub-year">Dec 2026</div>
+          <div>
+            <div class="pub-title">Ph.D. Electrical Engineering</div>
+            <div class="pub-venue">Chung Yuan Christian University · Taoyuan City, Taiwan</div>
+            <div class="pub-authors">Dissertation: Quantum Artificial Intelligence for Resilient Power Systems: Advanced Spatiotemporal Forecasting of Renewable Energy and Extreme Weather Events (Prof. Ying-Yi Hong)</div>
+          </div>
+          <span class="pub-badge review">Expected</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2018</div>
+          <div>
+            <div class="pub-title">M.S. Electrical Engineering</div>
+            <div class="pub-venue">Chung Yuan Christian University · Taoyuan City, Taiwan</div>
+            <div class="pub-authors">Thesis: A Hybrid Deep Learning-Based Network for 24-Hour Ahead Wind Power Forecasting (Prof. Ying-Yi Hong)</div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2014</div>
+          <div>
+            <div class="pub-title">B.S. Electronics Engineering</div>
+            <div class="pub-venue">Adamson University · Manila, Philippines</div>
+            <div class="pub-authors">Thesis: Smoke Emission Meter Using Image Processing With Cloud Application (Engr. Mark Angelo Purio)</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">CR</div>
+    <div>© 2026 Christian Lian Paulo P. Rioflorido · Taoyuan, Taiwan</div>
+    <div class="footer-links">
+      <a href="https://linkedin.com/in/clprioflorido" target="_blank">LinkedIn</a>
+      <a href="https://github.com/tianpaul01" target="_blank">GitHub</a>
+      <a href="https://orcid.org/0000-0001-9841-7389" target="_blank">ORCID</a>
+      <a href="https://scholar.google.com/citations?user=cOfYFAoAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+    </div>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.skill-card, .pub-item, .honor-card');
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach((el, i) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(22px)';
+      el.style.transition = `opacity 0.55s ${Math.min(i * 0.06, 0.5)}s ease, transform 0.55s ${Math.min(i * 0.06, 0.5)}s ease`;
+      revealObserver.observe(el);
+    });
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const f = e.target;
+      const name = (f.first.value + ' ' + f.last.value).trim();
+      const subject = f.subject.value.trim() || 'Inquiry from your website';
+      const body = f.message.value + '\n\n--\n' + name + (f.email.value ? '\n' + f.email.value : '');
+      window.location.href = 'mailto:clprioflorido17@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    }
+
+    function toggleNav() {
+      const nav = document.querySelector('nav');
+      const open = nav.classList.toggle('open');
+      document.querySelector('.nav-toggle').setAttribute('aria-expanded', open);
+    }
+  </script>
+</body>
+</html>

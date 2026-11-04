@@ -4,6 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Christian Lian Paulo Perez Rioflorido | AI & Quantum Computing Researcher</title>
+  <meta name="description" content="Ph.D. candidate at Chung Yuan Christian University researching quantum AI and deep learning for spatiotemporal forecasting of renewable energy and typhoons. NVIDIA Academic Grant recipient."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Christian Lian Paulo Perez Rioflorido | Quantum AI Researcher"/>
+  <meta property="og:description" content="Quantum AI and deep learning for resilient power systems: typhoon, wind, and solar forecasting on NVIDIA HPC."/>
+  <meta property="og:url" content="https://tianpaul01.github.io/"/>
+  <meta name="theme-color" content="#0a0f1e"/>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a0f1e'/%3E%3Ctext x='50' y='66' font-size='46' text-anchor='middle' fill='%23c9a84c' font-family='Georgia,serif'%3ECR%3C/text%3E%3C/svg%3E"/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
     :root {
@@ -12,7 +19,7 @@
       --gold: #c9a84c;
       --gold-light: #e8c97a;
       --text-main: #e8e4da;
-      --text-muted: #8a8888;
+      --text-muted: #a8a6a6;
       --border: rgba(201,168,76,0.18);
       --section-gap: 120px;
     }
@@ -30,7 +37,7 @@
       animation: fadeDown 0.8s ease forwards;
     }
     .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; letter-spacing: 0.05em; color: var(--gold); text-decoration: none; }
-    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links { display: flex; gap: 30px; list-style: none; }
     .nav-links a { text-decoration: none; color: var(--text-muted); font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.3s; }
     .nav-links a:hover { color: var(--gold); }
 
@@ -87,11 +94,12 @@
     .skill-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px; }
     .tag { font-size: 0.7rem; padding: 4px 10px; border: 1px solid var(--border); color: var(--text-muted); letter-spacing: 0.07em; }
 
-    /* PUBLICATIONS & EXPERIENCE (shared pub-list styles) */
-    #publications { background: var(--navy-mid); }
+    /* EDUCATION / EXPERIENCE / PUBLICATIONS (shared pub-list styles) */
+    #education, #publications { background: var(--navy-mid); }
     .pub-list { display: flex; flex-direction: column; }
     .pub-item { display: grid; grid-template-columns: 64px 1fr auto; gap: 28px; align-items: start; padding: 32px 0; border-bottom: 1px solid var(--border); }
     .pub-item:first-child { border-top: 1px solid var(--border); }
+    #education .pub-item, #experience .pub-item { grid-template-columns: 130px 1fr auto; }
     .pub-year { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--gold); padding-top: 4px; }
     .pub-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; line-height: 1.35; margin-bottom: 7px; }
     .pub-title a { color: inherit; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.3s, color 0.3s; }
@@ -103,7 +111,33 @@
     .pub-badge.published { border: 1px solid rgba(100,200,100,0.3); color: #7ec87e; }
     .pub-badge.conference { border: 1px solid rgba(100,160,220,0.4); color: #7ab4e8; }
 
-    /* CONFERENCE PAPERS SUBSECTION */
+
+    /* ABSTRACTS */
+    .abstract { margin-top: 12px; }
+    .abstract summary { cursor: pointer; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); list-style: none; display: inline-flex; align-items: center; gap: 8px; }
+    .abstract summary::-webkit-details-marker { display: none; }
+    .abstract summary::before { content: '+'; display: inline-block; width: 14px; text-align: center; border: 1px solid var(--border); line-height: 14px; }
+    .abstract[open] summary::before { content: '\2212'; }
+    .abstract p { margin-top: 12px; padding-left: 14px; border-left: 1px solid var(--border); font-size: 0.85rem; color: var(--text-muted); font-weight: 300; line-height: 1.7; max-width: 760px; }
+
+
+    /* NAV TOGGLE / CV LINK */
+    .nav-toggle { display: none; background: none; border: 1px solid var(--border); color: var(--gold); width: 42px; height: 38px; font-size: 1.2rem; cursor: pointer; }
+    .nav-links a.nav-cv { color: var(--gold); border: 1px solid var(--border); padding: 6px 14px; }
+    .nav-links a.nav-cv:hover { border-color: var(--gold); }
+    .hero-open { margin-top: 28px; font-size: 0.85rem; color: var(--text-muted); display: flex; align-items: center; gap: 10px; animation: fadeUp 0.9s 0.8s ease both; }
+    .hero-open::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #7ec87e; box-shadow: 0 0 0 4px rgba(126,200,126,0.15); flex-shrink: 0; }
+
+    /* RESEARCH FOCUS */
+    .research-focus { margin-top: 32px; padding: 24px 28px; border: 1px solid var(--border); background: linear-gradient(135deg, rgba(201,168,76,0.05) 0%, transparent 70%); }
+    .research-focus-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+    .research-focus ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .research-focus li { font-size: 0.92rem; color: var(--text-main); font-weight: 300; padding-left: 18px; position: relative; line-height: 1.6; }
+    .research-focus li::before { content: ''; position: absolute; left: 0; top: 0.7em; width: 8px; height: 1px; background: var(--gold); }
+    .research-focus li strong { font-weight: 500; color: var(--gold-light); }
+    .form-note { font-size: 0.78rem; color: var(--text-muted); }
+
+    /* SUBSECTION TITLES */
     .pub-subsection-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.6rem;
@@ -116,13 +150,8 @@
       align-items: center;
       gap: 16px;
     }
-    .pub-subsection-title::before {
-      content: '';
-      display: block;
-      width: 24px;
-      height: 1px;
-      background: var(--gold);
-    }
+    .pub-subsection-title::before { content: ''; display: block; width: 24px; height: 1px; background: var(--gold); }
+    .pub-subsection-title.first { margin-top: 0; }
 
     /* PEER REVIEW BANNER */
     .reviewer-banner {
@@ -137,6 +166,7 @@
     .reviewer-banner-icon { color: var(--gold); font-size: 1.6rem; flex-shrink: 0; margin-top: 2px; }
     .reviewer-banner-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
     .reviewer-banner-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--text-main); margin-bottom: 10px; }
+    .reviewer-banner-title.spaced { margin-top: 20px; }
     .reviewer-journals { display: flex; flex-wrap: wrap; gap: 8px; }
     .reviewer-journal-tag { font-size: 0.75rem; padding: 5px 14px; border: 1px solid rgba(201,168,76,0.3); color: var(--gold-light); letter-spacing: 0.06em; }
 
@@ -162,7 +192,7 @@
     .form-group label { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
     .form-group input, .form-group textarea { background: var(--navy-mid); border: 1px solid var(--border); color: var(--text-main); padding: 14px 18px; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; outline: none; transition: border-color 0.3s; resize: none; }
     .form-group input:focus, .form-group textarea:focus { border-color: var(--gold); }
-    .form-group input::placeholder, .form-group textarea::placeholder { color: #444; }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: #777; }
     .form-submit { padding: 16px 40px; background: var(--gold); color: var(--navy); border: none; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; cursor: pointer; transition: background 0.3s, transform 0.2s; align-self: flex-start; }
     .form-submit:hover { background: var(--gold-light); transform: translateY(-2px); }
 
@@ -178,18 +208,30 @@
     @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
     /* RESPONSIVE */
+    @media (max-width: 1100px) {
+      .nav-links { gap: 18px; }
+      .nav-links a { font-size: 0.75rem; }
+    }
+    @media (max-width: 1000px) {
+      .nav-toggle { display: block; }
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; background: rgba(10,15,30,0.97); border-bottom: 1px solid var(--border); padding: 8px 24px 16px; }
+      nav.open .nav-links { display: flex; }
+      .nav-links li { border-bottom: 1px solid var(--border); }
+      .nav-links li:last-child { border-bottom: none; }
+      .nav-links a { display: block; padding: 14px 0; font-size: 0.85rem; }
+      .nav-links a.nav-cv { border: none; padding: 14px 0; }
+    }
     @media (max-width: 900px) {
       nav { padding: 18px 24px; }
       section { padding: 80px 24px; }
       #hero { padding: 120px 24px 60px; }
       .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
       .skills-grid, .honors-grid { grid-template-columns: 1fr 1fr; }
-      .pub-item { grid-template-columns: 48px 1fr; }
+      .pub-item, #education .pub-item, #experience .pub-item { grid-template-columns: 1fr; gap: 8px; }
       .pub-badge { display: none; }
       footer { flex-direction: column; gap: 16px; text-align: center; }
     }
     @media (max-width: 600px) {
-      .nav-links { display: none; }
       .skills-grid, .honors-grid { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
       .about-stats { grid-template-columns: 1fr 1fr; }
@@ -201,13 +243,16 @@
   <!-- NAV -->
   <nav>
     <a class="nav-logo" href="#hero">CR</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" onclick="toggleNav()">☰</button>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#publications">Publications</a></li>
       <li><a href="#honors">Honors</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="Rioflorido_CV.pdf" class="nav-cv" target="_blank" rel="noopener">CV</a></li>
     </ul>
   </nav>
 
@@ -229,7 +274,9 @@
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">Get in Touch</a>
         <a href="#publications" class="btn-outline">View Publications</a>
+        <a href="Rioflorido_CV.pdf" class="btn-outline" target="_blank" rel="noopener">Download CV</a>
       </div>
+      <div class="hero-open">Ph.D. graduating Dec 2026 · Open to postdoctoral, industry research, and collaboration opportunities</div>
     </div>
   </section>
 
@@ -248,20 +295,71 @@
         <div class="about-text">
           <div class="section-label">About Me</div>
           <h2 class="section-title" style="margin-bottom:24px;">Bridging <em style="font-style:italic; color:var(--gold);">quantum computing</em> and real-world AI.</h2>
-          <p>I am a Ph.D. candidate in Electrical Engineering at Chung Yuan Christian University (CYCU), Taiwan, higher ranked in core courses including Machine Learning &amp; Deep Learning and Quantum Algorithms.</p>
-          <p>My research focuses on quantum AI for resilient power systems — designing advanced spatiotemporal forecasting models for renewable energy and extreme weather events such as typhoons. I build end-to-end pipelines on NVIDIA A100/H100 HPC clusters using CUDA-Q, cuQuantum, PyTorch, and Lightning.</p>
-          <p>I am an NVIDIA Academic Grant recipient and co-author with the NVIDIA AI Technology Center (NVAITC), with over 7 years of combined research and industry experience spanning autonomous robotics, computer vision, NLP, and cloud-scale AI deployments.</p>
+          <p>I am a Ph.D. candidate in Electrical Engineering at Chung Yuan Christian University (CYCU), Taiwan (expected December 2026), advised by Prof. Ying-Yi Hong. My dissertation is on quantum artificial intelligence for resilient power systems: advanced spatiotemporal forecasting of renewable energy and extreme weather events.</p>
+          <p>I build end-to-end forecasting pipelines on enterprise NVIDIA A100/H100 HPC clusters and cloud infrastructures using CUDA-Q, cuQuantum, PyTorch, and Lightning, and I have deployed optimized computer vision and NLP models for real-world commercial applications.</p>
+          <p>I am an NVIDIA Academic Grant recipient and co-author with the NVIDIA AI Technology Center (NVAITC). I have led multidisciplinary research initiatives, published in top-tier journals, and mentored engineering teams and students across academic and corporate environments.</p>
+          <div class="research-focus">
+            <div class="research-focus-label">Research Focus</div>
+            <ul>
+              <li><strong>Quantum machine learning:</strong> hybrid quantum-classical models (QNN, QLSTM, graph-quantum networks) run on CUDA-Q and cuQuantum.</li>
+              <li><strong>Extreme-weather and renewable forecasting:</strong> typhoon track/intensity, wind speed and power, and solar irradiance for resilient power systems.</li>
+              <li><strong>HPC and optimization:</strong> GPU-accelerated pipelines (up to 109× speedup) and swarm/evolutionary metaheuristics for model tuning.</li>
+            </ul>
+          </div>
           <div class="about-links">
             <a class="about-link" href="https://linkedin.com/in/clprioflorido" target="_blank">LinkedIn</a>
             <a class="about-link" href="https://github.com/tianpaul01" target="_blank">GitHub</a>
             <a class="about-link" href="https://orcid.org/0000-0001-9841-7389" target="_blank">ORCID</a>
+            <a class="about-link" href="https://scholar.google.com/citations?user=cOfYFAoAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
             <a class="about-link" href="mailto:clprioflorido17@gmail.com">Email Me</a>
           </div>
           <div class="about-stats">
             <div><div class="stat-num">7+</div><div class="stat-label">Years Research</div></div>
-            <div><div class="stat-num">12+</div><div class="stat-label">Publications</div></div>
+            <div><div class="stat-num">13</div><div class="stat-label">Publications</div></div>
+            <div><div class="stat-num">6</div><div class="stat-label">Journals Reviewed</div></div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="section-inner">
+      <div class="section-label">Academic Background</div>
+      <h2 class="section-title">Education</h2>
+      <div class="pub-list">
+
+        <div class="pub-item">
+          <div class="pub-year">Dec 2026</div>
+          <div>
+            <div class="pub-title">Ph.D. Electrical Engineering</div>
+            <div class="pub-venue">Chung Yuan Christian University · Taoyuan City, Taiwan</div>
+            <div class="pub-authors">Dissertation: Quantum Artificial Intelligence for Resilient Power Systems: Advanced Spatiotemporal Forecasting of Renewable Energy and Extreme Weather Events (Prof. Ying-Yi Hong)</div>
+          </div>
+          <span class="pub-badge review">Expected</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2018</div>
+          <div>
+            <div class="pub-title">M.S. Electrical Engineering</div>
+            <div class="pub-venue">Chung Yuan Christian University · Taoyuan City, Taiwan</div>
+            <div class="pub-authors">Thesis: A Hybrid Deep Learning-Based Network for 24-Hour Ahead Wind Power Forecasting (Prof. Ying-Yi Hong)</div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2014</div>
+          <div>
+            <div class="pub-title">B.S. Electronics Engineering</div>
+            <div class="pub-venue">Adamson University · Manila, Philippines</div>
+            <div class="pub-authors">Thesis: Smoke Emission Meter Using Image Processing With Cloud Application (Engr. Mark Angelo Purio)</div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -280,32 +378,32 @@
           <div class="skill-name">Quantum AI</div>
           <p class="skill-desc">Design and implementation of QNN/QLSTM hybrid quantum-classical architectures for forecasting and optimization, run exclusively on CUDA-Q.</p>
           <div class="skill-tags">
-            <span class="tag">CUDA-Q</span><span class="tag">cuQuantum</span><span class="tag">PennyLane</span><span class="tag">QLSTM</span>
+            <span class="tag">CUDA-Q</span><span class="tag">cuQuantum</span><span class="tag">PennyLane</span><span class="tag">Qiskit</span><span class="tag">QLSTM</span>
           </div>
         </div>
 
         <div class="skill-card">
           <span class="skill-icon">📈</span>
           <div class="skill-name">Spatiotemporal Forecasting</div>
-          <p class="skill-desc">End-to-end pipelines for wind speed, solar GHI, and typhoon track/intensity forecasting on NVIDIA A100/H100 HPC and cloud platforms.</p>
+          <p class="skill-desc">End-to-end pipelines for wind speed, solar GHI, load, and typhoon track/intensity forecasting on NVIDIA A100/H100 HPC and cloud platforms.</p>
           <div class="skill-tags">
-            <span class="tag">PyTorch</span><span class="tag">Lightning</span><span class="tag">LSTM</span><span class="tag">Graph NN</span>
+            <span class="tag">PyTorch</span><span class="tag">Lightning</span><span class="tag">TFT</span><span class="tag">CNN-LSTM</span>
           </div>
         </div>
 
         <div class="skill-card">
           <span class="skill-icon">👁️</span>
           <div class="skill-name">Computer Vision &amp; Robotics</div>
-          <p class="skill-desc">Real-time object detection, facial recognition, autonomous navigation, and scene understanding deployed within ROS on edge hardware.</p>
+          <p class="skill-desc">Real-time object detection, tracking, facial recognition, and scene understanding, integrated with ROS and ONVIF intelligent cameras on edge hardware.</p>
           <div class="skill-tags">
-            <span class="tag">OpenCV</span><span class="tag">TensorRT</span><span class="tag">ROS</span><span class="tag">OpenVINO</span>
+            <span class="tag">OpenCV</span><span class="tag">OpenVINO</span><span class="tag">ONNX</span><span class="tag">ROS</span><span class="tag">ONVIF</span>
           </div>
         </div>
 
         <div class="skill-card">
           <span class="skill-icon">🗣️</span>
           <div class="skill-name">NLP &amp; LLMs</div>
-          <p class="skill-desc">Multilingual NLP for smart speakers and call centers (Thai, Tagalog, Chinese, English); LLM-based prediction workflows with BERT and beyond.</p>
+          <p class="skill-desc">Multilingual Speech-to-Text and QA models (Thai, Tagalog, Chinese, English); LLM-based prediction workflows with BERT-like models and beyond.</p>
           <div class="skill-tags">
             <span class="tag">BERT</span><span class="tag">LLMs</span><span class="tag">Speech-to-Text</span><span class="tag">Q&amp;A</span>
           </div>
@@ -313,19 +411,19 @@
 
         <div class="skill-card">
           <span class="skill-icon">☁️</span>
-          <div class="skill-name">Cloud &amp; HPC Infrastructure</div>
-          <p class="skill-desc">Scalable AI workloads on AWS, Google Cloud, and NVIDIA Metropolis — with hands-on deployment experience on A100/H100 GPU clusters.</p>
+          <div class="skill-name">Programming &amp; Infrastructure</div>
+          <p class="skill-desc">Scalable AI workloads on HPC clusters and cloud platforms, with MLOps and data-ingestion tooling. Languages spoken: English, Filipino, Chinese.</p>
           <div class="skill-tags">
-            <span class="tag">AWS</span><span class="tag">Docker</span><span class="tag">CUDA</span><span class="tag">cuDNN</span>
+            <span class="tag">Python</span><span class="tag">C/C++</span><span class="tag">MATLAB</span><span class="tag">CUDA</span><span class="tag">Docker</span><span class="tag">Git</span><span class="tag">Linux</span><span class="tag">MySQL</span>
           </div>
         </div>
 
         <div class="skill-card">
           <span class="skill-icon">⚡</span>
           <div class="skill-name">Power Systems &amp; Energy</div>
-          <p class="skill-desc">AI-driven solutions for renewable energy forecasting and grid resilience for wind farms and solar power systems, published in IEEE TPS and Applied Energy.</p>
+          <p class="skill-desc">AI-driven solutions for renewable energy forecasting and grid resilience for wind farms and solar power systems, published in IEEE TPS, Energy, and Applied Energy.</p>
           <div class="skill-tags">
-            <span class="tag">Wind Power</span><span class="tag">Solar GHI</span><span class="tag">PSO</span><span class="tag">IEEE TPS</span>
+            <span class="tag">Wind Power</span><span class="tag">Solar GHI</span><span class="tag">PSO</span><span class="tag">TensorFlow</span><span class="tag">Caffe</span>
           </div>
         </div>
 
@@ -339,91 +437,163 @@
   <section id="experience">
     <div class="section-inner">
       <div class="section-label">Career</div>
-      <h2 class="section-title">Professional Experience</h2>
+      <h2 class="section-title">Experience</h2>
 
+      <!-- RESEARCH -->
+      <div class="pub-subsection-title first">Research</div>
       <div class="pub-list">
 
         <div class="pub-item">
-          <div class="pub-year">2021–Present</div>
+          <div class="pub-year">Sep 2021 – Present</div>
           <div>
-            <div class="pub-title">Research Assistant (Ph.D.)</div>
-            <div class="pub-venue">Intelligent Systems on Power Engineering Lab · CYCU</div>
+            <div class="pub-title">PhD Graduate Researcher</div>
+            <div class="pub-venue">Chung Yuan Christian University · Taoyuan City, Taiwan</div>
             <div class="pub-authors">
-              • Secured NVIDIA Academic Grant and collaborated with NVIDIA AI Technology Center (NVAITC)<br/>
-              • Designed QNN/QLSTM architectures for typhoon and solar forecasting<br/>
-              • Built end-to-end pipelines on A100/H100 using CUDA-Q, cuQuantum, PyTorch Lightning<br/>
-              • Led LLM-based forecasting experiments with reproducible evaluation pipelines
+              • <strong>NVIDIA Collaboration &amp; Grant:</strong> Secured the NVIDIA Academic Grant for "Hybrid Deep Learning and Quantum Network for Typhoon Forecasting in a Wind Power Farm" (published in <em>Energy</em>). Co-authored research with NVIDIA AI Technology Center on Hybrid Graph-Quantum Neural Networks (published in <em>IEEE Transactions on Power Systems</em>).<br/>
+              • <strong>Quantum &amp; Spatiotemporal Forecasting:</strong> Designed quantum-inspired QNN/QLSTM and deep learning architectures (TFT, CNN-LSTM) for typhoon track/intensity and solar GHI forecasting.<br/>
+              • <strong>HPC &amp; Acceleration:</strong> Built end-to-end forecasting pipelines using PyTorch/Lightning on NVIDIA A100/H100 clusters; accelerated energy workloads with cuQuantum and ran typhoon circuits exclusively on CUDA-Q.<br/>
+              • <strong>LLM Integration:</strong> Led experiments and ablations for LLM-based prediction workflows, ensuring reproducible evaluation standards.
             </div>
           </div>
           <span class="pub-badge published">Current</span>
         </div>
 
         <div class="pub-item">
-          <div class="pub-year">2023–2024</div>
+          <div class="pub-year">2016 – 2018</div>
           <div>
-            <div class="pub-title">AI / Computer Vision Intern</div>
-            <div class="pub-venue">Uni-President Information Corp. · Taipei</div>
+            <div class="pub-title">MS Graduate Researcher</div>
+            <div class="pub-venue">Chung Yuan Christian University · Taoyuan City, Taiwan</div>
             <div class="pub-authors">
-              • Developed real-time object detection for retail inventory tracking (NVIDIA Metropolis)<br/>
-              • Built facial recognition system for personalized customer interaction<br/>
-              • Deployed scalable CV pipelines using AWS &amp; Google Cloud
+              • Prototyped hybrid neural networks blending classical and deep models to leverage complementary biases for time series wind power forecasting (published in <em>Applied Energy</em>).<br/>
+              • Performed extensive data analysis on wind turbine datasets to uncover temporal/seasonal drivers.
+            </div>
+          </div>
+          <span class="pub-badge review">Academic</span>
+        </div>
+
+      </div>
+
+      <!-- PROFESSIONAL -->
+      <div class="pub-subsection-title">Professional</div>
+      <div class="pub-list">
+
+        <div class="pub-item">
+          <div class="pub-year">Aug 2023 – Mar 2024</div>
+          <div>
+            <div class="pub-title">Intern</div>
+            <div class="pub-venue">President Information Corp. · Taipei City, Taiwan</div>
+            <div class="pub-authors">
+              • <strong>Inventory Optimization:</strong> Deployed a real-time object detection system using NVIDIA Metropolis, achieving a ~20% reduction in stockouts and boosting inventory accuracy by ~15%.<br/>
+              • <strong>Retail Analytics:</strong> Engineered automated CV models for shelf scanning and product recognition to drive dynamic price optimization and merchandising strategies.<br/>
+              • <strong>Customer Engagement:</strong> Implemented a facial recognition pipeline to enable personalized in-store services and targeted marketing campaigns.
             </div>
           </div>
           <span class="pub-badge conference">Industry</span>
         </div>
 
         <div class="pub-item">
-          <div class="pub-year">2018–2021</div>
+          <div class="pub-year">Oct 2018 – Jun 2021</div>
           <div>
             <div class="pub-title">Deep Learning Software Engineer</div>
-            <div class="pub-venue">New Era AI Robotics · New Kinpo Group</div>
+            <div class="pub-venue">New Era AI Robotics, Inc. (New Kinpo Group) · New Taipei City, Taiwan</div>
             <div class="pub-authors">
-              • Built autonomous robotics systems using ROS (navigation, mapping, obstacle avoidance)<br/>
-              • Developed CV pipelines: detection, tracking, face recognition, activity recognition<br/>
-              • Led NLP systems for smart speakers (BERT, multilingual STT &amp; QA)<br/>
-              • Optimized real-time inference using TensorRT across embedded systems
+              • <strong>Computer Vision Deployment:</strong> Delivered production-grade models for object detection, tracking, and face recognition using PyTorch, TensorFlow, and Caffe.<br/>
+              • <strong>Multilingual NLP Development:</strong> Spearheaded Speech-to-Text and QA models supporting Thai, Tagalog, Chinese, and English, integrating BERT-like LLMs in collaboration with NVIDIA.<br/>
+              • <strong>System Integration:</strong> Orchestrated communication between vision and speech nodes using ROS middleware to synchronize sensory inputs with robotic responses.<br/>
+              • <strong>Edge Integration:</strong> Integrated AI models with ONVIF intelligent cameras for security analytics and developed utilities for efficient data ingestion and MLOps workflows.
             </div>
           </div>
           <span class="pub-badge published">Industry</span>
         </div>
 
         <div class="pub-item">
-          <div class="pub-year">2021–2026</div>
+          <div class="pub-year">May 2015 – Aug 2016</div>
           <div>
-            <div class="pub-title">Teaching Assistant · Artificial Intelligence</div>
-            <div class="pub-venue">Chung Yuan Christian University</div>
+            <div class="pub-title">Test Engineer</div>
+            <div class="pub-venue">ROHM Electronics Philippines, Inc. · Cavite, Philippines</div>
             <div class="pub-authors">
-              • Delivered lectures, guided projects, and mentored students in AI &amp; Deep Learning<br/>
-              • Supported multiple courses including ML, DL, and Big Data Analytics
+              • Improved semiconductor production quality by investigating failures and refining test protocols/code to enhance signal processing and fault detection.
             </div>
           </div>
-          <span class="pub-badge review">Academic</span>
+          <span class="pub-badge conference">Engineering</span>
         </div>
 
+      </div>
+
+      <!-- TEACHING -->
+      <div class="pub-subsection-title">Teaching</div>
+      <div class="pub-list">
+
         <div class="pub-item">
-          <div class="pub-year">2022–2023</div>
+          <div class="pub-year">Oct 2026</div>
           <div>
-            <div class="pub-title">Professor · Machine Learning &amp; Signal Processing</div>
-            <div class="pub-venue">Technological Institute of the Philippines</div>
+            <div class="pub-title">Invited Lecturer</div>
+            <div class="pub-venue">Adamson University · Manila, Philippines</div>
             <div class="pub-authors">
-              • Taught 120+ students across ML and signal processing courses<br/>
-              • Designed curriculum bridging theory with applied AI systems
+              • Course: Renewable Energy: Design and Control of Wind Energy Systems (Virtual / Online)<br/>
+              • Designed and delivered a multi-session instructional series on the principles, design methodologies, and control strategies for wind energy systems.<br/>
+              • Conducted 3-hour intensive lecture blocks to structure the curriculum.
             </div>
           </div>
           <span class="pub-badge review">Teaching</span>
         </div>
 
         <div class="pub-item">
-          <div class="pub-year">2015–2016</div>
+          <div class="pub-year">Fall 2016, Fall 2021, Spring 2025–2026</div>
           <div>
-            <div class="pub-title">Test Engineer</div>
-            <div class="pub-venue">ROHM Electronics Philippines</div>
+            <div class="pub-title">Graduate Teaching Assistant</div>
+            <div class="pub-venue">Chung Yuan Christian University · Taoyuan City, Taiwan</div>
             <div class="pub-authors">
-              • Improved semiconductor production quality via fault detection analysis<br/>
-              • Optimized signal processing pipelines for chip validation systems
+              • Courses: Artificial Intelligence; Microgrid; Machine Learning &amp; Deep Learning; Big Data Analysis<br/>
+              • Delivered lectures, lab sessions, and project advising across multiple cohorts; taught deep learning for vision and forecasting to 25+ students per semester.
             </div>
           </div>
-          <span class="pub-badge conference">Engineering</span>
+          <span class="pub-badge review">Academic</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">Aug 2022 – May 2023</div>
+          <div>
+            <div class="pub-title">Adjunct Professor / Thesis Advisor</div>
+            <div class="pub-venue">Technological Institute of the Philippines · Quezon City, Philippines</div>
+            <div class="pub-authors">
+              • Courses: Signal, Spectra, and Signal Processing; Prediction &amp; Machine Learning<br/>
+              • Designed curriculum materials, homework assignments, projects, and student evaluation metrics.<br/>
+              • Supervised 5 undergraduate thesis teams, guiding problem formulation, experimental design, and defense. 3 projects led to peer-reviewed papers with students as first authors (IEEE TENCON 2023; IET-ICETA 2022 ×2).
+            </div>
+          </div>
+          <span class="pub-badge review">Teaching</span>
+        </div>
+
+      </div>
+
+      <!-- LEADERSHIP -->
+      <div class="pub-subsection-title">Leadership &amp; Service</div>
+      <div class="pub-list">
+
+        <div class="pub-item">
+          <div class="pub-year">Aug 2026 – Present</div>
+          <div>
+            <div class="pub-title">Competitions Chair</div>
+            <div class="pub-venue">National Taiwan University Quantum Club (NTUQC) · Taipei City, Taiwan</div>
+            <div class="pub-authors">
+              • Direct and administer competitive programming and quantum problem-solving challenges for student members.<br/>
+              • Coordinate with academic and institutional partners to design competition tracks aligned with current quantum machine learning and quantum computing frameworks.
+            </div>
+          </div>
+          <span class="pub-badge published">Current</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2021 – Present</div>
+          <div>
+            <div class="pub-title">President (2021–22), Past President (2022–23), Secretary (2023–24), Treasurer (2025–Present)</div>
+            <div class="pub-venue">Association of Filipino Scholars in Taiwan (AFST)</div>
+            <div class="pub-authors">
+              • Directed organizational strategy, governance oversight, financial management, and administrative operations across multiple tenures.
+            </div>
+          </div>
+          <span class="pub-badge published">Current</span>
         </div>
 
       </div>
@@ -444,9 +614,10 @@
         <div class="pub-item">
           <div class="pub-year">2026</div>
           <div>
-            <div class="pub-title"><a href="https://doi.org/10.1016/j.energy.2026.141900" target="_blank" rel="noopener">Hybrid Temporal Fusion Transformer and Quantum Long Short-Term Memory Network for Typhoon Forecasting at a Wind Power Farm</a></div>
-            <div class="pub-venue">Energy, Article 141900</div>
-            <div class="pub-authors">Y.-Y. Hong, C. L. P. P. Rioflorido, Y.-Y. Wang, T.-C. Huang, S. See, H.-P. Van, &amp; M.-T. Li · DOI: 10.1016/j.energy.2026.141900</div>
+            <div class="pub-title"><a href="https://doi.org/10.1016/j.mlwa.2026.100955" target="_blank" rel="noopener">Adaptive Diversity-Enhanced Phasor Particle Swarm Optimization–Differential Evolution Hybrid for Unimodal–Multimodal Problems with Engineering Applications</a></div>
+            <div class="pub-venue">Machine Learning with Applications, vol. 25, pp. 1–25, July 2026</div>
+            <div class="pub-authors"><strong>C. L. P. P. Rioflorido</strong> &amp; Y.-Y. Hong · DOI: 10.1016/j.mlwa.2026.100955</div>
+            <details class="abstract"><summary>Abstract</summary><p>Proposes CQPPSO-DE, a hybrid metaheuristic that pairs Phasor Particle Swarm Optimization (PPSO) with success-history adaptive Differential Evolution (DE). An ablation study on 64 benchmark functions shows both components are essential: adding DE to the PPSO baseline gave statistically significant gains on 59 of the 64 problems. Two secondary mechanisms refine performance on specific landscapes: Lorenz chaotic initialization improves initial population diversity (most helpful on unimodal and separable problems), and a quantum-inspired random walk adds targeted perturbation on multimodal problems where PPSO tends to converge prematurely. Evaluated on the CEC2021 and CEC2022 suites and six engineering design problems, CQPPSO-DE is competitive with state-of-the-art metaheuristics.</p></details>
           </div>
           <span class="pub-badge published">Published</span>
         </div>
@@ -454,19 +625,21 @@
         <div class="pub-item">
           <div class="pub-year">2026</div>
           <div>
-            <div class="pub-title">Adaptive Diversity-Enhanced Phasor Particle Swarm Optimization–Differential Evolution Hybrid for Unimodal–Multimodal Problems with Engineering Applications</div>
-            <div class="pub-venue">Machine Learning with Applications, 100955</div>
-            <div class="pub-authors">C. L. P. P. Rioflorido &amp; Y.-Y. Hong · DOI: 10.1016/j.mlwa.2026.100955</div>
+            <div class="pub-title"><a href="https://doi.org/10.1016/j.energy.2026.141900" target="_blank" rel="noopener">Hybrid Temporal Fusion Transformer and Quantum Long Short-Term Memory Network for Typhoon Forecasting at a Wind Power Farm</a></div>
+            <div class="pub-venue">Energy, vol. 360, pp. 1–13, July 2026</div>
+            <div class="pub-authors">Y.-Y. Hong, <strong>C. L. P. P. Rioflorido</strong>, Y.-Y. Wang, T.-C. Huang, S. See, H.-P. Van, &amp; M.-T. Li · DOI: 10.1016/j.energy.2026.141900</div>
+            <details class="abstract"><summary>Abstract</summary><p>Proposes the Temporal Fusion Transformer–Quantum Long Short-Term Memory (TFT-QLSTM) network to improve forecasting for wind farms during typhoons, with a case study of the Gaomei wind farm in Taichung. The framework produces joint 24-hour-ahead forecasts of seven typhoon and wind farm variables, is optimized with Chaos Quantum Energy Valley Optimization (CQEVO), and remains interpretable through the TFT's variable selection network.</p></details>
           </div>
           <span class="pub-badge published">Published</span>
         </div>
 
         <div class="pub-item">
-          <div class="pub-year">2025</div>
+          <div class="pub-year">2026</div>
           <div>
             <div class="pub-title"><a href="https://doi.org/10.1109/TPWRS.2025.3626336" target="_blank" rel="noopener">A Hybrid Graph-Quantum Neural Network for Solar Irradiance Forecasting Using Chaotic Swarm Optimization and Cauchy Distribution</a></div>
-            <div class="pub-venue">IEEE Transactions on Power Systems, pp. 1–13</div>
-            <div class="pub-authors">Y.-Y. Hong, C. L. P. P. Rioflorido, &amp; Y.-Y. Wang · DOI: 10.1109/TPWRS.2025.3626336</div>
+            <div class="pub-venue">IEEE Transactions on Power Systems, pp. 1619–1631, May 2026</div>
+            <div class="pub-authors">Y.-Y. Hong, <strong>C. L. P. P. Rioflorido</strong>, &amp; Y.-Y. Wang · DOI: 10.1109/TPWRS.2025.3626336</div>
+            <details class="abstract"><summary>Abstract</summary><p>Presents a 24-hour-ahead global horizontal irradiance (GHI) forecasting framework for power system applications. A Hybrid Graph-Quantum Neural Network (HGQNN) combines graph convolution networks and quantum neural networks to capture spatial and temporal relationships in solar irradiance data and to quantify forecast uncertainty. The architecture and hyperparameters are tuned with a proposed Chaotic Phasor Particle Swarm Optimization with Cauchy Distribution (CPPSO-CD). Simulations show better accuracy than traditional approaches such as back-propagation neural networks, CNNs, LSTMs, and self-attention-based models.</p></details>
           </div>
           <span class="pub-badge published">Published</span>
         </div>
@@ -475,8 +648,9 @@
           <div class="pub-year">2024</div>
           <div>
             <div class="pub-title"><a href="https://doi.org/10.1016/j.eswa.2023.122645" target="_blank" rel="noopener">Hybrid Deep Learning and Quantum-Inspired Neural Network for Day-Ahead Spatiotemporal Wind Speed Forecasting</a></div>
-            <div class="pub-venue">Expert Systems with Applications, 241, 122645</div>
-            <div class="pub-authors">Y.-Y. Hong, C. L. P. P. Rioflorido, &amp; W. Zhang · DOI: 10.1016/j.eswa.2023.122645</div>
+            <div class="pub-venue">Expert Systems with Applications, vol. 241, pp. 1–11, May 2024</div>
+            <div class="pub-authors">Y.-Y. Hong, <strong>C. L. P. P. Rioflorido</strong>, &amp; W. Zhang · DOI: 10.1016/j.eswa.2023.122645</div>
+            <details class="abstract"><summary>Abstract</summary><p>Develops a day-ahead spatiotemporal wind speed forecasting model that cascades parallel convolutional neural networks with an LSTM and a quantum-inspired neural network (QINN). The model is tuned by two nested loops, with quantum particle swarm optimization (QPSO) in the outer loop selecting the model structure and hyperparameters. Simulation results show it outperforms competing methods for 24-hour-ahead wind speed forecasting.</p></details>
           </div>
           <span class="pub-badge published">Published</span>
         </div>
@@ -485,8 +659,9 @@
           <div class="pub-year">2019</div>
           <div>
             <div class="pub-title"><a href="https://doi.org/10.1016/j.apenergy.2019.05.044" target="_blank" rel="noopener">A Hybrid Deep Learning-Based Neural Network for 24-Hour Ahead Wind Power Forecasting</a></div>
-            <div class="pub-venue">Applied Energy, 250, pp. 530–539</div>
-            <div class="pub-authors">Y.-Y. Hong &amp; C. L. P. P. Rioflorido · DOI: 10.1016/j.apenergy.2019.05.044</div>
+            <div class="pub-venue">Applied Energy, vol. 250, pp. 530–539, Sept. 2019</div>
+            <div class="pub-authors">Y.-Y. Hong &amp; <strong>C. L. P. P. Rioflorido</strong> · DOI: 10.1016/j.apenergy.2019.05.044</div>
+            <details class="abstract"><summary>Abstract</summary><p>Wind power output is uncertain because wind speed fluctuates, so accurate prediction is important for efficient power system operation. This paper proposes a hybrid deep learning network in which a convolutional neural network is cascaded with a radial basis function neural network that uses a double Gaussian function as its activation function. Simulations show it is more accurate than traditional methods for 24-hour-ahead wind power forecasting.</p></details>
           </div>
           <span class="pub-badge published">Published</span>
         </div>
@@ -494,25 +669,27 @@
       </div>
 
       <!-- CONFERENCE PAPERS -->
-      <div class="pub-subsection-title">Conference Papers</div>
+      <div class="pub-subsection-title">Select Conference Proceedings</div>
       <div class="pub-list">
 
         <div class="pub-item">
-          <div class="pub-year">2025</div>
+          <div class="pub-year">2026</div>
           <div>
-            <div class="pub-title">Classification of Photovoltaic Faults using CatBoost Classifier Optimized by QPSO</div>
-            <div class="pub-venue">Green Solutions &amp; Emerging Technologies for Sustainability, pp. 297–308</div>
-            <div class="pub-authors">Y.-Y. Hong, C. L. P. P. Rioflorido, H.-P. Van</div>
+            <div class="pub-title">Temporal Fusion Transformer Integrated with Grey Wolf Optimizer for 24-hour Ahead Load Forecasting</div>
+            <div class="pub-venue">Preprints of the 23rd IFAC World Congress, Busan, Republic of Korea, Aug. 23–28, 2026</div>
+            <div class="pub-authors">Y.-Y. Hong, <strong>C. L. P. P. Rioflorido</strong>, C. M. Chen, C. J. Yang, J. M. F. Centeno, H. R. Limjoco, L. V. Gulmatico, M. J. N. L. Manalo, &amp; J. L. C. Onia</div>
+            <details class="abstract"><summary>Abstract</summary><p>This paper proposes a 24-hour ahead load forecasting framework that integrates the Temporal Fusion Transformer (TFT) with the Grey Wolf Optimizer (GWO) to address forecasting challenges in Taiwan’s power system, which is affected by renewable energy integration, industrial variability, and extreme weather. The TFT component captures multi-scale temporal dependencies and provides interpretability, while the GWO is employed for systematic hyperparameter optimization to improve accuracy and robustness. The framework is validated using nine years (2017–2025) of Taiwan Power Company operational data, including load profiles, meteorological variables, and economic indicators. Compared with benchmark models, the proposed TFT-GWO achieves superior results, with MAE (mean absolute error), RMSE (root mean squared error), and R2 (coefficient of determination) of 0.0145, 0.0220, and 0.9390, respectively. The results demonstrate that the proposed approach supports more reliable unit commitment, reserve allocation, and day-ahead market operations, highlighting the effectiveness of combining transformer-based architectures with metaheuristic optimization in power system forecasting.</p></details>
           </div>
           <span class="pub-badge conference">Conference</span>
         </div>
 
         <div class="pub-item">
-          <div class="pub-year">2023</div>
+          <div class="pub-year">2025</div>
           <div>
-            <div class="pub-title"><a href="https://doi.org/10.1109/TENCON58879.2023.10322315" target="_blank" rel="noopener">Design of a Non-Invasive Egg Sexing Device Utilizing Artificial Intelligence for Duck Species</a></div>
-            <div class="pub-venue">TENCON 2023 — IEEE Region 10 Conference</div>
-            <div class="pub-authors">S. Arenas, P. J. R. Billones, J. C. V. Lao, J. A. C. Mercado, I. D. G. Sy, C. L. P. P. Rioflorido · DOI: 10.1109/TENCON58879.2023.10322315</div>
+            <div class="pub-title">Classification of Photovoltaic Faults using CatBoost Classifier Optimized by QPSO</div>
+            <div class="pub-venue">2nd International Conference on "Green Solutions and Emerging Technologies for Sustainability" (GSETS 2025), Ho Chi Minh City, Vietnam, pp. 297–308</div>
+            <div class="pub-authors">Y.-Y. Hong, <strong>C. L. P. P. Rioflorido</strong>, &amp; H.-P. Van</div>
+            <details class="abstract"><summary>Abstract</summary><p>Photovoltaic (PV) systems are an essential source of renewable energy generation, but their performance is sensitive to a combination of component faults. Thus, the reliability of PV systems can be ensured with the assistance of fault detection and classification. This work presents a new technique for fault classification using CatBoost, a machine learning algorithm that lies in a family of gradient boosting decision trees (GBDT), which is chosen owing to its performance with complex data sets and categorical features. However, its classification performance is dependent on the hyperparameter setting of the model. This paper implements Quantum Particle Swarm Optimization (QPSO) algorithm to optimize hyperparameter values. The hybrid technique proposed is referred to as CatBoost-QPSO and is applied to a dataset that classifies 10 fault types: line-to-line faults, module open-circuit and short-circuit faults in a string and both strings, partial shading conditions in a string and both strings and normal operating conditions. To assess the performance of the CatBoost-QPSO procedure, various benchmark metrics (accuracy, precision, recall, and F1 score) are utilized. The proposed method achieves an accuracy of 93.27%, which indicates that the method could be efficient and robust to compute. These findings underscore the significance of leveraging both advanced boosting techniques with hyper-optimization methods for fault classification towards enhancing PV systems. This research found a new way to increase the reliability and operational efficiency of the renewable energy infrastructure, which will cut down the downtime and enable maximum energy generation.</p></details>
           </div>
           <span class="pub-badge conference">Conference</span>
         </div>
@@ -521,38 +698,20 @@
           <div class="pub-year">2023</div>
           <div>
             <div class="pub-title"><a href="https://doi.org/10.1109/ISGTEUROPE56780.2023.10407345" target="_blank" rel="noopener">A Deep CNN-LSTM Model Tuned by PPSO for Spatiotemporal Solar GHI Forecasting</a></div>
-            <div class="pub-venue">IEEE PES Innovative Smart Grid Technologies Europe (ISGT EUROPE), pp. 1–5</div>
-            <div class="pub-authors">Y.-Y. Hong, C. L. P. P. Rioflorido · DOI: 10.1109/ISGTEUROPE56780.2023.10407345</div>
+            <div class="pub-venue">2023 IEEE PES Innovative Smart Grid Technologies Europe (ISGT EUROPE), Grenoble, France, Oct. 2023, pp. 1–5</div>
+            <div class="pub-authors">Y.-Y. Hong &amp; <strong>C. L. P. P. Rioflorido</strong> · DOI: 10.1109/ISGTEUROPE56780.2023.10407345</div>
+            <details class="abstract"><summary>Abstract</summary><p>Proposes a deep learning model that combines a convolutional neural network and an LSTM for 24-hour-ahead solar GHI forecasting. It uses spatiotemporal information, capturing spatial and temporal dependencies from multiple locations and time windows. Phasor particle swarm optimization (PPSO), a PSO variant that represents particles with complex numbers, tunes the number of layers, filters, and neurons. Tested on data from several countries, the model outperforms baseline methods in accuracy and robustness.</p></details>
           </div>
           <span class="pub-badge conference">Conference</span>
         </div>
 
         <div class="pub-item">
-          <div class="pub-year">2022</div>
+          <div class="pub-year">2023</div>
           <div>
-            <div class="pub-title"><a href="https://doi.org/10.1109/IET-ICETA56553.2022.9971564" target="_blank" rel="noopener">Design of a Household Consumption based Water Leak Detection System Utilizing Machine Learning Algorithm</a></div>
-            <div class="pub-venue">IET International Conference on Engineering Technologies and Applications</div>
-            <div class="pub-authors">D. J. A. Amora, M. A. V. Janapin, B. A. M. Calayag, C. L. P. P. Rioflorido, N. M. Estur et al. · DOI: 10.1109/IET-ICETA56553.2022.9971564</div>
-          </div>
-          <span class="pub-badge conference">Conference</span>
-        </div>
-
-        <div class="pub-item">
-          <div class="pub-year">2022</div>
-          <div>
-            <div class="pub-title"><a href="https://doi.org/10.1109/IET-ICETA56553.2022.9971530" target="_blank" rel="noopener">One-Hour Ahead Spatio-Temporal Solar GHI Forecasting Using Long Short-Term Memory</a></div>
-            <div class="pub-venue">IET International Conference on Engineering Technologies and Applications</div>
-            <div class="pub-authors">Y.-Y. Hong, Y.-T. Pan, C.-C. Hsu, C. L. P. P. Rioflorido, J. B. D. Santos · DOI: 10.1109/IET-ICETA56553.2022.9971530</div>
-          </div>
-          <span class="pub-badge conference">Conference</span>
-        </div>
-
-        <div class="pub-item">
-          <div class="pub-year">2022</div>
-          <div>
-            <div class="pub-title"><a href="https://doi.org/10.1109/IET-ICETA56553.2022.9971667" target="_blank" rel="noopener">Soft Sensing Measurement of Dissolved Ammonia Nitrogen in Tank-Based Eel Aquaculture Systems Utilizing Deep Learning</a></div>
-            <div class="pub-venue">IET International Conference on Engineering Technologies and Applications</div>
-            <div class="pub-authors">D. J. A. Amora, J. V. Apan, D. N. C. Layosa, R. C. Sarmiento, J. J. Tugado, C. L. P. P. Rioflorido et al. · DOI: 10.1109/IET-ICETA56553.2022.9971667</div>
+            <div class="pub-title"><a href="https://doi.org/10.1109/TENCON58879.2023.10322315" target="_blank" rel="noopener">Design of a Non-Invasive Egg Sexing Device Utilizing Artificial Intelligence for Duck Species</a></div>
+            <div class="pub-venue">TENCON 2023 — IEEE Region 10 Conference, Chiang Mai, Thailand, Oct. 31 – Nov. 3, 2023, pp. 1169–1174</div>
+            <div class="pub-authors">S. U. Arenas, P. J. R. Billones, J. C. V. Lao, J. A. C. Mercado, I. D. G. Sy, &amp; <strong>C. L. P. P. Rioflorido</strong> · DOI: 10.1109/TENCON58879.2023.10322315</div>
+            <details class="abstract"><summary>Abstract</summary><p>Introduces a non-invasive device that combines AI, spectroscopy, and computer vision to determine the sex of duck embryos inside eggs. Plumage color serves as the sex indicator, and a hybrid CNN and gated recurrent unit (GRU) model works alongside the spectroscopic analysis. Experiments report 98.68% sexing accuracy with an average processing time of about 37 ms. Hatchability stayed at 74.80% across a population of 500 eggs, indicating that spectroscopy does not harm egg viability. The work offers a more sustainable way to manage male ducklings in the industry.</p></details>
           </div>
           <span class="pub-badge conference">Conference</span>
         </div>
@@ -561,8 +720,42 @@
           <div class="pub-year">2022</div>
           <div>
             <div class="pub-title"><a href="https://doi.org/10.1109/IET-ICETA56553.2022.9971559" target="_blank" rel="noopener">A Short-Term Spatiotemporal Wind Speed Forecasting Using CNN Optimized by PSO</a></div>
-            <div class="pub-venue">IET International Conference on Engineering Technologies and Applications</div>
-            <div class="pub-authors">Y.-Y. Hong, J. B. D. Santos, S. S. Lin, Y. D. Lee, J. H. Wang, J. L. Jiang, C. L. P. P. Rioflorido et al. · DOI: 10.1109/IET-ICETA56553.2022.9971559</div>
+            <div class="pub-venue">2022 IET International Conference on Engineering Technologies and Applications (IET-ICETA), Changhua, Taiwan, Oct. 14–16, 2022, pp. 1–2</div>
+            <div class="pub-authors">Y.-Y. Hong, J. B. D. Santos, S.-S. Lin, Y.-D. Lee, J.-H. Wang, J.-L. Jiang, <strong>C. L. P. P. Rioflorido</strong>, &amp; J.-N. Yeh · DOI: 10.1109/IET-ICETA56553.2022.9971559</div>
+            <details class="abstract"><summary>Abstract</summary><p>Since precise wind speed forecasts can be converted directly into accurate wind power predictions, wind speed forecasting is essential for the operation of power systems. A spatiotemporal wind speed prediction model based on the 2D Convolutional Neural Network (2D CNN) optimized by the Particle Swarm optimization (PSO) is proposed in this paper. In order for the 2D CNN to establish parameters adaptively, the hyperparameters (kernel size and length, dropout rate, and the number of input cells in the hidden layers) are optimized by PSO. Five wind speed datasets in Taiwan were used for this study. The results validate the applicability of the proposed method.</p></details>
+          </div>
+          <span class="pub-badge conference">Conference</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2022</div>
+          <div>
+            <div class="pub-title"><a href="https://doi.org/10.1109/IET-ICETA56553.2022.9971530" target="_blank" rel="noopener">One-Hour Ahead Spatio-Temporal Solar GHI Forecasting Using Long Short-Term Memory</a></div>
+            <div class="pub-venue">2022 IET International Conference on Engineering Technologies and Applications (IET-ICETA), Changhua, Taiwan, Oct. 14–16, 2022</div>
+            <div class="pub-authors">Y.-Y. Hong, Y.-T. Pan, C.-C. Hsu, J. B. D. Santos, &amp; <strong>C. L. P. P. Rioflorido</strong> · DOI: 10.1109/IET-ICETA56553.2022.9971530</div>
+            <details class="abstract"><summary>Abstract</summary><p>Studies short-term GHI forecasting at a single target site using time-series data from surrounding sites. An LSTM network integrates the spatial and temporal information, and particle swarm optimization (PSO) tunes its hyperparameters and time step. Simulations show the method is more accurate than existing approaches for 1-hour-ahead GHI forecasting.</p></details>
+          </div>
+          <span class="pub-badge conference">Conference</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2022</div>
+          <div>
+            <div class="pub-title"><a href="https://doi.org/10.1109/IET-ICETA56553.2022.9971667" target="_blank" rel="noopener">Soft Sensing Measurement of Dissolved Ammonia Nitrogen in Tank-Based Eel Aquaculture Systems Utilizing Deep Learning</a></div>
+            <div class="pub-venue">2022 IET International Conference on Engineering Technologies and Applications (IET-ICETA), Changhua, Taiwan, Oct. 14–16, 2022</div>
+            <div class="pub-authors">D. J. A. Amora, J. V. Apan, D. N. C. Layosa, R. C. Sarmiento, J. J. Tugado, &amp; <strong>C. L. P. P. Rioflorido</strong> · DOI: 10.1109/IET-ICETA56553.2022.9971667</div>
+            <details class="abstract"><summary>Abstract</summary><p>Japanese eels are susceptible to low concentrations of dissolved ammonia nitrogen (NH3−N). To provide proper intervention, measuring the dissolved ammonia nitrogen in the tank-based eel aquaculture is crucial. However, existing laboratory methods and digital sensors are time-consuming and expensive solutions. This study proposed an Attentive Interpretable Tabular Learning (TabNet) Deep Learning soft-sensing model to predict dissolved NH3-N concentrations. The prediction model is based on input parameters: water temperature, conductivity, pH, and dissolved oxygen. The datasets are gathered from the Global Environment Monitoring System (GEMStat), a water quality parameter database. The performance of the proposed Deep Learning model was compared with Feed-forward neural network (F-NN) and One Dimensional-CNN. The models were evaluated using statistical methods: R-squared (R2), Mean Absolute Error (MAE), and Root Mean Squared Error (RMSE). The simulation results showed that TabNet performed better in predicting dissolved NH3-N concentrations.</p></details>
+          </div>
+          <span class="pub-badge conference">Conference</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2022</div>
+          <div>
+            <div class="pub-title"><a href="https://doi.org/10.1109/IET-ICETA56553.2022.9971564" target="_blank" rel="noopener">Design of a Household Consumption Based Water Leak Detection System Utilizing Machine Learning Algorithm</a></div>
+            <div class="pub-venue">2022 IET International Conference on Engineering Technologies and Applications (IET-ICETA), Changhua, Taiwan, Oct. 14–16, 2022</div>
+            <div class="pub-authors">D. J. A. Amora, M. A. V. Janapin, B. A. M. Calayag, <strong>C. L. P. P. Rioflorido</strong>, N. M. Estur, &amp; P. A. L. Villegas · DOI: 10.1109/IET-ICETA56553.2022.9971564</div>
+            <details class="abstract"><summary>Abstract</summary><p>Water is a limited resource; thus, every drop matters. Leaks in water distribution networks (WDNs) and residences contribute considerably to water utility losses. The goal of this research is to design and build a water leak-detecting system based on home use. Based on historical water consumption and experimental flow rate water consumption data, this research developed a Bidirectional LSTM (BiLSTM) machine learning (ML) approach for building a water leakage detection model. The BiLSTM model is compared against Gated recurrent units (GRU) and Autoregressive models on the following performance metrics: mean squared error (MSE), root mean squared error (RMSE), mean absolute percentage error (MAPE), and mean absolute error (MAE). According to the data, the BiLSTM model performed better overall in water leak detection.</p></details>
           </div>
           <span class="pub-badge conference">Conference</span>
         </div>
@@ -574,12 +767,19 @@
         <div class="reviewer-banner-icon">🔍</div>
         <div class="reviewer-banner-content">
           <div class="reviewer-banner-label">Academic Service</div>
-          <div class="reviewer-banner-title">Peer Reviewer</div>
+          <div class="reviewer-banner-title">Journal Reviewer</div>
           <div class="reviewer-journals">
-            <span class="reviewer-journal-tag">Applied Soft Computing</span>
-            <span class="reviewer-journal-tag">Energy Reports</span>
+            <span class="reviewer-journal-tag">Applied Soft Computing (Elsevier)</span>
+            <span class="reviewer-journal-tag">Energy Reports (Elsevier)</span>
+            <span class="reviewer-journal-tag">Soft Computing (Elsevier)</span>
+            <span class="reviewer-journal-tag">Discover Applied Sciences (Springer Nature)</span>
+            <span class="reviewer-journal-tag">Applied Energy (Elsevier)</span>
             <span class="reviewer-journal-tag">IEEE Sensors Journal</span>
-            <span class="reviewer-journal-tag">Soft Computing</span>
+          </div>
+          <div class="reviewer-banner-title spaced">Conference Reviewer / Program Committee</div>
+          <div class="reviewer-journals">
+            <span class="reviewer-journal-tag">2026 IEEE Int'l Conf. on Systems, Man, and Cybernetics (SMC)</span>
+            <span class="reviewer-journal-tag">2025 IEEE Industry Applications Society Annual Meeting (IAS)</span>
           </div>
         </div>
       </div>
@@ -593,35 +793,40 @@
   <section id="honors">
     <div class="section-inner">
       <div class="section-label">Recognition</div>
-      <h2 class="section-title">Honors &amp; Awards</h2>
+      <h2 class="section-title">Honors, Awards &amp; Grants</h2>
       <div class="honors-grid">
+        <div class="honor-card">
+          <div class="honor-year">Sep 2026</div>
+          <div class="honor-title">First Prize — Best Poster Competition</div>
+          <div class="honor-org">UST-CYCU Joint Engineering and Technology Research Symposium 2026</div>
+        </div>
         <div class="honor-card">
           <div class="honor-year">2025</div>
           <div class="honor-title">NVIDIA Academic Grant Recipient</div>
           <div class="honor-org">"Hybrid Deep Learning and Quantum Network for Typhoon Forecasting in a Wind Power Farm"</div>
         </div>
         <div class="honor-card">
-          <div class="honor-year">2025</div>
-          <div class="honor-title">NCHC Open Hackathon — 109× Speedup Achievement</div>
-          <div class="honor-org">National Center for High-Performance Computing, Taiwan</div>
+          <div class="honor-year">Dec 2025</div>
+          <div class="honor-title">NCHC-NVIDIA Open Hackathon — 109× GPU Speedup</div>
+          <div class="honor-org">Optimized typhoon forecasting workloads · National Center for High-Performance Computing, Taiwan</div>
         </div>
         <div class="honor-card">
-          <div class="honor-year">2025</div>
-          <div class="honor-title">Honorable Mention — CYCU × Intel × ASUS AI PC OpenVINO Competition</div>
+          <div class="honor-year">Aug 2025</div>
+          <div class="honor-title">Honorable Mention — CYCU × Intel × ASUS AI PC OpenVINO Application Competition</div>
           <div class="honor-org">Chung Yuan Christian University</div>
         </div>
         <div class="honor-card">
-          <div class="honor-year">2022</div>
-          <div class="honor-title">CYCU Outstanding Foreign PhD Scholarship for Academic Research Upgrades</div>
-          <div class="honor-org">Chung Yuan Christian University, Taiwan</div>
+          <div class="honor-year">May 2022</div>
+          <div class="honor-title">CYCU Outstanding Foreign PhD Scholarship</div>
+          <div class="honor-org">Awarded for academic research upgrades · Chung Yuan Christian University, Taiwan</div>
         </div>
         <div class="honor-card">
-          <div class="honor-year">2021–22</div>
-          <div class="honor-title">President — Association of Filipino Scholars in Taiwan</div>
-          <div class="honor-org">Student Leadership Recognition</div>
+          <div class="honor-year">2016, 2021</div>
+          <div class="honor-title">International Student Scholar</div>
+          <div class="honor-org">Chung Yuan Christian University</div>
         </div>
         <div class="honor-card">
-          <div class="honor-year">2017</div>
+          <div class="honor-year">Aug 2017</div>
           <div class="honor-title">Honorable Mention — International Innovation Competition on Applications of Sensors &amp; Micro-Computers</div>
           <div class="honor-org">International Recognition</div>
         </div>
@@ -645,17 +850,19 @@
             <div class="contact-line"><span>🔗</span><a href="https://linkedin.com/in/clprioflorido" target="_blank">linkedin.com/in/clprioflorido</a></div>
             <div class="contact-line"><span>💻</span><a href="https://github.com/tianpaul01" target="_blank">github.com/tianpaul01</a></div>
             <div class="contact-line"><span>🔬</span><a href="https://orcid.org/0000-0001-9841-7389" target="_blank">orcid.org/0000-0001-9841-7389</a></div>
+            <div class="contact-line"><span>🎓</span><a href="https://scholar.google.com/citations?user=cOfYFAoAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar profile</a></div>
           </div>
         </div>
         <form class="contact-form" onsubmit="handleSubmit(event)">
           <div class="form-row">
-            <div class="form-group"><label>First Name</label><input type="text" placeholder="John"/></div>
-            <div class="form-group"><label>Last Name</label><input type="text" placeholder="Doe"/></div>
+            <div class="form-group"><label for="f-first">First Name</label><input id="f-first" name="first" type="text" placeholder="John"/></div>
+            <div class="form-group"><label for="f-last">Last Name</label><input id="f-last" name="last" type="text" placeholder="Doe"/></div>
           </div>
-          <div class="form-group"><label>Email</label><input type="email" placeholder="john@example.com"/></div>
-          <div class="form-group"><label>Subject</label><input type="text" placeholder="Research Collaboration / Inquiry"/></div>
-          <div class="form-group"><label>Message</label><textarea rows="5" placeholder="Describe your project, collaboration idea, or inquiry..."></textarea></div>
-          <button type="submit" class="form-submit">Send Message</button>
+          <div class="form-group"><label for="f-email">Email</label><input id="f-email" name="email" type="email" placeholder="john@example.com"/></div>
+          <div class="form-group"><label for="f-subject">Subject</label><input id="f-subject" name="subject" type="text" placeholder="Research Collaboration / Inquiry"/></div>
+          <div class="form-group"><label for="f-message">Message</label><textarea id="f-message" name="message" rows="5" placeholder="Describe your project, collaboration idea, or inquiry..." required></textarea></div>
+          <button type="submit" class="form-submit">Open in Email App</button>
+          <p class="form-note">This opens a pre-filled email to clprioflorido17@gmail.com in your email app.</p>
         </form>
       </div>
     </div>
@@ -664,11 +871,12 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-logo">CR</div>
-    <div>© 2025 Christian Lian Paulo P. Rioflorido · Taoyuan, Taiwan</div>
+    <div>© 2026 Christian Lian Paulo P. Rioflorido · Taoyuan, Taiwan</div>
     <div class="footer-links">
       <a href="https://linkedin.com/in/clprioflorido" target="_blank">LinkedIn</a>
       <a href="https://github.com/tianpaul01" target="_blank">GitHub</a>
       <a href="https://orcid.org/0000-0001-9841-7389" target="_blank">ORCID</a>
+      <a href="https://scholar.google.com/citations?user=cOfYFAoAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
     </div>
   </footer>
 
@@ -699,23 +907,27 @@
     reveals.forEach((el, i) => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(22px)';
-      el.style.transition = `opacity 0.55s ${i * 0.06}s ease, transform 0.55s ${i * 0.06}s ease`;
+      el.style.transition = `opacity 0.55s ${Math.min(i * 0.06, 0.5)}s ease, transform 0.55s ${Math.min(i * 0.06, 0.5)}s ease`;
       revealObserver.observe(el);
     });
 
     function handleSubmit(e) {
       e.preventDefault();
-      const btn = e.target.querySelector('.form-submit');
-      btn.textContent = 'Message Sent ✓';
-      btn.style.background = '#2e7d32';
-      btn.style.color = '#fff';
-      setTimeout(() => {
-        btn.textContent = 'Send Message';
-        btn.style.background = '';
-        btn.style.color = '';
-        e.target.reset();
-      }, 3000);
+      const f = e.target;
+      const name = (f.first.value + ' ' + f.last.value).trim();
+      const subject = f.subject.value.trim() || 'Inquiry from your website';
+      const body = f.message.value + '\n\n--\n' + name + (f.email.value ? '\n' + f.email.value : '');
+      window.location.href = 'mailto:clprioflorido17@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     }
+
+    function toggleNav() {
+      const nav = document.querySelector('nav');
+      const open = nav.classList.toggle('open');
+      document.querySelector('.nav-toggle').setAttribute('aria-expanded', open);
+    }
+    document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => {
+      document.querySelector('nav').classList.remove('open');
+    }));
   </script>
 </body>
 </html>

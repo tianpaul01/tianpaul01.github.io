@@ -93,6 +93,10 @@
     .skill-desc { font-size: 0.86rem; color: var(--text-muted); line-height: 1.65; }
     .skill-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px; }
     .tag { font-size: 0.7rem; padding: 4px 10px; border: 1px solid var(--border); color: var(--text-muted); letter-spacing: 0.07em; }
+    .languages-strip { margin-top: 2px; background: var(--navy-mid); padding: 28px 32px; display: flex; align-items: center; gap: 28px; flex-wrap: wrap; border-left: 3px solid var(--gold); }
+    .languages-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+    .languages-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .languages-list .tag { font-size: 0.78rem; padding: 5px 14px; color: var(--gold-light); }
 
     /* EDUCATION / EXPERIENCE / PUBLICATIONS (shared pub-list styles) */
     #education, #publications { background: var(--navy-mid); }
@@ -305,7 +309,7 @@
         <div class="skill-card">
           <span class="skill-icon">☁️</span>
           <div class="skill-name">Programming &amp; Infrastructure</div>
-          <p class="skill-desc">Scalable AI workloads on HPC clusters and cloud platforms, with MLOps and data-ingestion tooling. Languages spoken: English, Filipino, Chinese.</p>
+          <p class="skill-desc">Scalable AI workloads on HPC clusters and cloud platforms, with MLOps and data-ingestion tooling.</p>
           <div class="skill-tags">
             <span class="tag">Python</span><span class="tag">C/C++</span><span class="tag">MATLAB</span><span class="tag">CUDA</span><span class="tag">Docker</span><span class="tag">Git</span><span class="tag">Linux</span><span class="tag">MySQL</span>
           </div>
@@ -320,6 +324,13 @@
           </div>
         </div>
 
+      </div>
+
+      <div class="languages-strip">
+        <div class="languages-label">Languages Spoken</div>
+        <div class="languages-list">
+          <span class="tag">English</span><span class="tag">Filipino</span><span class="tag">Chinese</span>
+        </div>
       </div>
     </div>
   </section>
